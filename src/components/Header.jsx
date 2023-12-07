@@ -62,12 +62,6 @@ const Header = () => {
             Vans
           </NavLink>
           <NavLink
-            to="/trucks"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
-          >
-            Trucks
-          </NavLink>
-          <NavLink
             to="/blog"
             className={({ isActive }) => (isActive ? "active-link" : null)}
           >

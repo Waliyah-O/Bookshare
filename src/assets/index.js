@@ -39,34 +39,3 @@ van16, van17, van18, van19, van20,
 van21, van22, van23, van24, van25, 
 van26, van27, van28, van29, van30,van31,
 }
-
-
-//trucks
-import truck1 from './images/truck1.jpg'
-import truck2 from './images/truck2.jpg'
-import truck3 from './images/truck3.jpg'
-import truck4 from './images/truck4MorimotoLighting.jpg'
-import truck5 from './images/truck5FordF350SuperDutywithCustomgrilleandblacklights.jpg'
-import truck6 from './images/truck6.jpg'
-import truck7 from './images/truck7Perfection!.jpg'
-import truck8 from './images/truck8VolkswagensaysUSpickupisbackonthetable-Autoblog.jpg'
-import truck9 from './images/truck9UltraliteTB50.jpg'
-import truck10 from './images/truck10MitsubishiFuso(2007)_ConceptTruck.jpg'
-import truck11 from './images/truck11.jpg'
-import truck12 from './images/truck12.jpg'
-import truck13 from './images/truck13BlackCatSkidsteer.jpg'
-import truck14 from './images/truck14.jpg'
-import truck15 from './images/truck15.jpg'
-import truck16 from './images/truck16.jpg'
-import truck17 from './images/truck17.jpg'
-import truck18 from './images/truck18.jpg'
-import truck19 from './images/truck19.jpg'
-import truck20 from './images/truck20.jpg'
-
-
-export {
-	truck1, truck2, truck3, truck4, truck5, 
-	truck6, truck7, truck8, truck9, truck10,
-	truck11, truck12, truck13, truck14, truck15,
-	truck16, truck17, truck18, truck19, truck20,
-}

@@ -1,14 +1,13 @@
 import { Suspense, useEffect } from "react";
 import { useState } from "react";
 import { Link, useLoaderData, defer, Await } from "react-router-dom";
-import { getHostVans, checkHostIdExists } from "../../api/vanapi";
-import { getHostTrucks } from "../../api/truckapi";
+import { getHostVans } from "../../api/vanapi";
 import { requireAuth } from "../../utils";
 import Loader from "../../components/Loader";
 
 export async function loader({ request }) {
   await requireAuth(request);
-  return defer({ vans: getHostVans(), trucks: getHostTrucks() });
+  return defer({ vans: getHostVans() });
 }
 
 const HostVans = () => {

@@ -27,9 +27,6 @@ function AboutPage() {
           <Link className="link-button" to="/vans">
             Explore our vans
           </Link>
-          <Link className="link-button" to="/trucks">
-            Explore our trucks
-          </Link>
         </div>
       </div>
     </div>

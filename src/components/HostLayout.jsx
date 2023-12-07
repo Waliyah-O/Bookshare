@@ -40,7 +40,6 @@ const HostLayout = () => {
             <button className="dropbtn">Add Rig</button>
             <div className="dropdown-content">
               <Link to="createVan">Van</Link>
-              <Link to="createTruck">Truck</Link>
             </div>
           </div>
         </NavLink>

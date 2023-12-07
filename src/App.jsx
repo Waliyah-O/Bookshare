@@ -21,10 +21,6 @@ import HomePage from "./pages/HomePage";
 import Blog from "./pages/Blog";
 import Vans, { loader as vansPageLoader } from "./pages/Vans/Vans";
 import VanDetail, { loader as vanDetailLoader } from "./pages/Vans/VanDetail";
-import Trucks from "./pages/Trucks/Trucks";
-import TruckDetail, {
-  loader as truckDetailLoader,
-} from "./pages/Trucks/TruckDetail";
 import HostDashboard, {
   loader as hostDashboardLoader,
 } from "./pages/Host/Dashboard";
@@ -47,13 +43,9 @@ import Login, {
 import { requireAuth } from "./utils";
 import ContactUs from "./pages/ContactUs";
 import CheckoutPage, { loader as checkoutLoader } from "./pages/CheckOut";
-import CheckoutTruck, {
-  loader as checkoutTruckLoader,
-} from "./pages/CheckoutTruck";
 import SuccessPage from "./pages/SuccessPage";
 import SignUp from "./pages/Signup";
 import CreateVanForm from "./components/CreateVanForm";
-import CreateTruckForm from "./components/CreateTruckForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -75,11 +67,6 @@ const router = createBrowserRouter(
         loader={checkoutLoader}
       />
       <Route
-        path="truck/:id/checkout"
-        element={<CheckoutTruck />}
-        loader={checkoutTruckLoader}
-      />
-      <Route
         path="vans"
         element={<Vans />}
         errorElement={<Error />}
@@ -90,13 +77,6 @@ const router = createBrowserRouter(
         element={<VanDetail />}
         loader={vanDetailLoader}
         errorElement={<Error />}
-      />
-      <Route path="trucks" element={<Trucks />} errorElement={<Error />} />
-      <Route
-        path="trucks/:id"
-        element={<TruckDetail />}
-        errorElement={<Error />}
-        loader={truckDetailLoader}
       />
 
       <Route path="host" element={<HostLayout />} errorElement={<Error />}>
@@ -118,7 +98,6 @@ const router = createBrowserRouter(
         />
 
         <Route path="createVan" element={<CreateVanForm />} />
-        <Route path="createTruck" element={<CreateTruckForm />} />
         <Route
           path="vans"
           element={<HostVans />}
@@ -163,31 +142,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="vans" element={<Vans />} />
-            <Route path="vans/:id" element={<VanDetail />} />
-            <Route path="trucks" element={<Trucks />} />
-            <Route path="trucks/:id" element={<TruckDetail />} />
-
-            <Route path="host" element={<HostLayout />}>
-              <Route index element={<HostDashboard />} />
-              <Route path="income" element={<Income />} />
-              <Route path="reviews" element={<Reviews />} />
-              <Route path="vans" element={<HostVans />} />
-              <Route path="vans/:id" element={<HostVanDetails />}>
-                <Route index element={<HostVanInfo />} />
-                <Route path="pricing" element={<HostVanPricing />} />
-                <Route path="photos" element={<HostVanPhotos />} />
-              </Route>
-            </Route>
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter> */
-}

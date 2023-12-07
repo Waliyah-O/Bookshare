@@ -10,7 +10,6 @@ const HomePage = () => {
       </p>
       <div className="home-buttons">
         <Link to="vans">Find your van</Link>
-        <Link to="trucks">Find your truck</Link>
       </div>
     </div>
   );
