@@ -6,16 +6,15 @@ import {
   defer,
   Await,
 } from "react-router-dom";
-import { getVans } from "../../api/vanapi";
+import { getBooks } from "../../api/bookapi";
 import Loader from "../../components/Loader";
 
 // load the page immediately without waiting for the data
 export function loader() {
-  return defer({ vans: getVans() });
-  // return getVans();
+  return defer({ vans: getBooks() });
 }
 
-const Vans = () => {
+const Books = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const dataPromise = useLoaderData();
 
@@ -125,4 +124,4 @@ const Vans = () => {
   );
 };
 
-export default Vans;
+export default Books;

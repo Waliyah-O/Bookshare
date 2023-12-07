@@ -9,10 +9,10 @@ import {
   useParams,
   Link,
 } from "react-router-dom";
-import { getVans } from "../api/vanapi";
+import { getBooks } from "../api/bookapi";
 
 export function loader({ params }) {
-  return getVans(params.id);
+  return getBooks(params.id);
 }
 
 const CheckoutPage = ({ price }) => {

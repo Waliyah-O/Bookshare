@@ -56,7 +56,7 @@ const Header = () => {
             About page
           </NavLink>
           <NavLink
-            to="/vans"
+            to="/books"
             className={({ isActive }) => (isActive ? "active-link" : null)}
           >
             Books

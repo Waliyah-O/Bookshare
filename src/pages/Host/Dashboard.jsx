@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Link, defer, Await, useLoaderData, redirect } from "react-router-dom";
-import { getHostVans } from "../../api/vanapi";
+import { getHostBooks } from "../../api/bookapi";
 import { BsStarFill } from "react-icons/bs";
 import Loader from "../../components/Loader";
 
@@ -11,7 +11,7 @@ export async function loader({ request }) {
     response.body = true;
     return response;
   }
-  return defer({ vans: getHostVans() });
+  return defer({ vans: getHostBooks() });
 }
 
 const HostDashboard = () => {
@@ -58,7 +58,7 @@ const HostDashboard = () => {
       </section>
       <section className="host-dashboard-vans">
         <div className="top">
-          <h2>Your listed rigs</h2>
+          <h2>Your listed books</h2>
           <Link to="vans">View all</Link>
         </div>
         <Suspense

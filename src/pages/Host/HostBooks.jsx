@@ -1,13 +1,13 @@
 import { Suspense, useEffect } from "react";
 import { useState } from "react";
 import { Link, useLoaderData, defer, Await } from "react-router-dom";
-import { getHostVans, checkHostIdExists } from "../../api/vanapi";
+import { getHostBooks, checkHostIdExists } from "../../api/bookapi";
 import { requireAuth } from "../../utils";
 import Loader from "../../components/Loader";
 
 export async function loader({ request }) {
   await requireAuth(request);
-  return defer({ vans: getHostVans() });
+  return defer({ vans: getHostBooks() });
 }
 
 const HostVans = () => {
@@ -55,7 +55,7 @@ const HostVans = () => {
 
       if (hostExists) {
         // If host exists, get the host's vans
-        const hostVans = await getHostVans(hostId);
+        const hostVans = await getHostBooks(hostId);
         console.log("Host's Vans:", hostVans);
       } else {
         console.log("Host with ID", hostId, "not found in Firebase.");
@@ -79,11 +79,11 @@ const HostVans = () => {
 
   return (
     <div>
-      <h1 className="host-vans-title">Your listed rigs</h1>
+      <h1 className="host-vans-title">Your listed books</h1>
       <Suspense
         fallback={
           <>
-            <Loader /> <h2>Loading rigs...</h2>
+            <Loader /> <h2>Loading books...</h2>
           </>
         }
       >

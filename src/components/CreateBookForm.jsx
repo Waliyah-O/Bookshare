@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { requireAuth } from "../utils";
-import { getHostVans } from "../api/vanapi";
+import { getHostBooks } from "../api/bookapi";
 
 export async function loader({ params, request }) {
   await requireAuth(request);
-  return getHostVans(params.id);
+  return getHostBooks(params.id);
   // return getVan(params.id);
 }
 
-const CreateVanForm = () => {
+const CreateBookForm = () => {
   const [formData, setFormData] = useState({
     // id: new Date().getTime(),
     name: "",
@@ -181,4 +181,4 @@ const CreateVanForm = () => {
   );
 };
 
-export default CreateVanForm;
+export default CreateBookForm;
