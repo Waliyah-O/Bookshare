@@ -35,13 +35,11 @@ const HostLayout = () => {
         >
           Reviews
         </NavLink>
-        <NavLink style={({ isActive }) => (isActive ? activeStyle : null)}>
-          <div className="dropdown">
-            <button className="dropbtn">Add Rig</button>
-            <div className="dropdown-content">
-              <Link to="createVan">Van</Link>
-            </div>
-          </div>
+        <NavLink
+          to="createVan"
+          style={({ isActive }) => (isActive ? activeStyle : null)}
+        >
+          Add Book
         </NavLink>
       </nav>
       <Outlet />

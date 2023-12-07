@@ -40,7 +40,7 @@ const Header = () => {
     <>
       <header>
         <Link className="site-logo" to="/">
-          #rent_a_rig
+          #bookshare
         </Link>
         <nav>
           <NavLink
@@ -59,7 +59,7 @@ const Header = () => {
             to="/vans"
             className={({ isActive }) => (isActive ? "active-link" : null)}
           >
-            Vans
+            Books
           </NavLink>
           <NavLink
             to="/blog"

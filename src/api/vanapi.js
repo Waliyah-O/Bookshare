@@ -1,3 +1,4 @@
+
 export async function getVans(id) {
   const url = id ? `/api/vans/${id}` : "/api/vans"
   const res = await fetch(url)
@@ -10,6 +11,10 @@ export async function getVans(id) {
   }
   const data = await res.json()
   return data.vans
+}
+
+export async function checkHostIdExists(hostId){
+  return hostId !== undefined && hostId !== null;
 }
 
 export async function getHostVans(id) {

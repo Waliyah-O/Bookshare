@@ -4,7 +4,7 @@ const Footer = () => {
   
   return (
     <>
-      <footer>&#169; {date.getFullYear()} #RentARig</footer>
+      <footer>&#169; {date.getFullYear()} #bookshare</footer>
     </>
   );
 };

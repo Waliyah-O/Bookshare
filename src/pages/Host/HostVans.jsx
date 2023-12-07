@@ -1,7 +1,7 @@
 import { Suspense, useEffect } from "react";
 import { useState } from "react";
 import { Link, useLoaderData, defer, Await } from "react-router-dom";
-import { getHostVans } from "../../api/vanapi";
+import { getHostVans, checkHostIdExists } from "../../api/vanapi";
 import { requireAuth } from "../../utils";
 import Loader from "../../components/Loader";
 
@@ -13,7 +13,6 @@ export async function loader({ request }) {
 const HostVans = () => {
   const [trucks, setTrucks] = useState([]);
   const dataPromise = useLoaderData();
-  // const trucks = useLoaderData()
 
   function renderVanElements(vans) {
     const hostVansEls = vans.map((van) => (
