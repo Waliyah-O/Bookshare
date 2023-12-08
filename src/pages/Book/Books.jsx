@@ -65,31 +65,31 @@ const Books = () => {
         <div className="van-list-filter-buttons">
           <button
             className={`${
-              typeFilter === "novels"
-                ? "van-type simple selected"
-                : "van-type simple"
+              typeFilter === "novel"
+                ? "van-type novel selected"
+                : "van-type novel"
             }`}
-            onClick={() => handleFilterChange("type", "simple")}
+            onClick={() => handleFilterChange("type", "novel")}
           >
             Novels
           </button>
           <button
             className={`${
-              typeFilter === "books"
-                ? "van-type luxury selected"
-                : "van-type luxury"
+              typeFilter === "book"
+                ? "van-type book selected"
+                : "van-type book"
             }`}
-            onClick={() => handleFilterChange("type", "luxury")}
+            onClick={() => handleFilterChange("type", "book")}
           >
             Books
           </button>
           <button
             className={`${
-              typeFilter === "articles"
-                ? "van-type rugged selected"
-                : "van-type rugged"
+              typeFilter === "article"
+                ? "van-type article selected"
+                : "van-type article"
             }`}
-            onClick={() => handleFilterChange("type", "rugged")}
+            onClick={() => handleFilterChange("type", "article")}
           >
             Articles
           </button>
@@ -109,7 +109,7 @@ const Books = () => {
 
   return (
     <div className="van-list-container">
-      <h1>Explore our van options</h1>
+      <h1>Explore our book options</h1>
       <Suspense
         fallback={
           <h2>

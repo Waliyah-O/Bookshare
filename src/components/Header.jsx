@@ -40,7 +40,7 @@ const Header = () => {
     <>
       <header>
         <Link className="site-logo" to="/">
-          #bookshare
+          book<span style={{ color: "#ff8c38" }}>share</span>
         </Link>
         <nav>
           <NavLink
@@ -61,12 +61,12 @@ const Header = () => {
           >
             Books
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/blog"
             className={({ isActive }) => (isActive ? "active-link" : null)}
           >
             Blog
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active-link" : null)}

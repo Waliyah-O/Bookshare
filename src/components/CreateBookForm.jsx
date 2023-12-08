@@ -140,9 +140,9 @@ const CreateBookForm = () => {
               onChange={handleInputChange}
             >
               <option value="">Select option</option>
-              <option value="simple">simple</option>
-              <option value="luxury">luxury</option>
-              <option value="rugged">rugged</option>
+              <option value="novel">Novel</option>
+              <option value="book">Book</option>
+              <option value="article">Article</option>
             </select>
           </div>
           <div>
