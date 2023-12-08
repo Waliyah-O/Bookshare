@@ -324,18 +324,18 @@ footer {
   color: #ffead0;
 }
 
-.van-type.simple:hover,
-.van-type.simple.selected {
+.van-type.novel:hover,
+.van-type.novel.selected {
   background-color: #e17654;
 }
 
-.van-type.rugged:hover,
-.van-type.rugged.selected {
+.van-type.book:hover,
+.van-type.book.selected {
   background-color: #115e59;
 }
 
-.van-type.luxury:hover,
-.van-type.luxury.selected {
+.van-type.article:hover,
+.van-type.article.selected {
   background-color: #161616;
 }
 
