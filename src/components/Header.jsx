@@ -40,7 +40,7 @@ const Header = () => {
     <>
       <header>
         <Link className="site-logo" to="/">
-          #bookshare
+          book<span style={{ color: "#ff8c38" }}>share</span>
         </Link>
         <nav>
           <NavLink

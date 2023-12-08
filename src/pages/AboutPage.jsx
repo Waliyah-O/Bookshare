@@ -4,17 +4,21 @@ import bgImg from "../assets/images/about-hero.png";
 function AboutPage() {
   return (
     <div className="about-page-container">
-      <img src={bgImg} className="about-hero-image" alt="" />
       <div className="about-page-content">
-        <h1>Don&#39;t settle for less when you can get more. </h1>
+        <h1>About us</h1>
         <p>
-          Our mission is to enliven your road trips and truck needs with the
-          perfect books. Our books are re-certified before each trip to ensure
-          your plans can go off without a hitch. (Hitch costs extra 😉)
-        </p>
-        <p>
-          Our team is full of rent_a_rig enthusiasts who know firsthand the
-          magic of first class books
+          Bookshare Initiative facilitates the sharing of textbooks among
+          students. By participating in the initiative, students can both delve
+          into the captivating world of literature and collaborate in accessing
+          educational resources for their studies. We believe in the
+          extraordinary power of sharing, both n the form of used and new books
+          and vital financial aid. By connecting readers, learners, and
+          dreamers, we create a ripple effect of knowledge, inspiration, and
+          opportunity. Through our platform, we unite communities, bridging gaps
+          and empowering individuals from all walks of life. Join us in our
+          mission to foster a world where access to literature and educational
+          resources knows no boundaries. Together, let's create a legacy of
+          shared stories that change lives forever.
         </p>
       </div>
       <div className="about-page-cta">
@@ -29,6 +33,7 @@ function AboutPage() {
           </Link>
         </div>
       </div>
+      <img src={bgImg} className="about-hero-image" alt="" />
     </div>
   );
 }
