@@ -65,33 +65,33 @@ const Books = () => {
         <div className="van-list-filter-buttons">
           <button
             className={`${
-              typeFilter === "simple"
+              typeFilter === "novels"
                 ? "van-type simple selected"
                 : "van-type simple"
             }`}
             onClick={() => handleFilterChange("type", "simple")}
           >
-            Simple
+            Novels
           </button>
           <button
             className={`${
-              typeFilter === "luxury"
+              typeFilter === "books"
                 ? "van-type luxury selected"
                 : "van-type luxury"
             }`}
             onClick={() => handleFilterChange("type", "luxury")}
           >
-            luxury
+            Books
           </button>
           <button
             className={`${
-              typeFilter === "rugged"
+              typeFilter === "articles"
                 ? "van-type rugged selected"
                 : "van-type rugged"
             }`}
             onClick={() => handleFilterChange("type", "rugged")}
           >
-            rugged
+            Articles
           </button>
           {typeFilter ? (
             <button
@@ -125,3 +125,5 @@ const Books = () => {
 };
 
 export default Books;
+
+// wale
