@@ -36,7 +36,7 @@ const HostLayout = () => {
           Reviews
         </NavLink>
         <NavLink
-          to="createVan"
+          to="addBook"
           style={({ isActive }) => (isActive ? activeStyle : null)}
         >
           Add Book

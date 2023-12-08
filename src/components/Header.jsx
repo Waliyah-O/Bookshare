@@ -61,12 +61,12 @@ const Header = () => {
           >
             Books
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/blog"
             className={({ isActive }) => (isActive ? "active-link" : null)}
           >
             Blog
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active-link" : null)}
