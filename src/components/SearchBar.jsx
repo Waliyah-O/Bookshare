@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
 
 const SearchBar = ({ onSearch }) => {
   const [input, setInput] = useState("");
@@ -10,9 +9,8 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="login-form">
+    <div className="search-form">
       <input
-        style={{ width: "300px" }}
         placeholder="Type to search..."
         value={input}
         onChange={(e) => handleChange(e.target.value)}

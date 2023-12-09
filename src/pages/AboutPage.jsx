@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import bgImg from "../assets/images/about-hero.png";
+import gif from "../assets/gif/aboutGif2.gif";
+import gif2 from "../assets/gif/aboutGif.gif";
+import gif3 from "../assets/gif/reading-more-books.gif";
 
 function AboutPage() {
   const bookShare = (
@@ -10,31 +12,43 @@ function AboutPage() {
   return (
     <div className="about-page-container">
       <div className="about-page-wrapper">
-        <img src={bgImg} className="about-hero-image" alt="" />
-        <div className="about-page-content">
+        <div className="about-hero-wrapper">
           <p>
             Welcome to {bookShare}, where the love for books meets the joy of
             reading! We are more than just an online bookstore; we are
             passionate bibliophiles dedicated to bringing the world of
             literature to your fingertips.
           </p>
-          <h3>Our Mission</h3>
-          <p>
-            At {bookShare}, our mission is to curate a diverse collection of
-            books that cater to every taste and interest. We believe that
-            everyone deserves access to great literature, and our carefully
-            selected catalog reflects our commitment to quality and diversity.
-            Whether you're a seasoned reader or just beginning your literary
-            journey, we aim to be your trusted companion on the road to
-            discovery.
-          </p>
-          <h3>What Sets Us Apart</h3>
-          <p>
-            Curated Selection Our team of passionate curators meticulously
-            selects each title in our collection. From timeless classics to
-            contemporary gems, we strive to offer a thoughtfully curated
-            selection that spans genres and cultures.
-          </p>
+          <img src={gif} className="about-hero-image" alt="" />
+        </div>{" "}
+        <div className="about-page-content">
+          <div className="about-section2">
+            <img src={gif2} alt="" />
+            <div >
+              <h3>Our Mission</h3>
+              <p>
+                At {bookShare}, our mission is to curate a diverse collection of
+                books that cater to every taste and interest. We believe that
+                everyone deserves access to great literature, and our carefully
+                selected catalog reflects our commitment to quality and
+                diversity. Whether you're a seasoned reader or just beginning
+                your literary journey, we aim to be your trusted companion on
+                the road to discovery.
+              </p>
+            </div>
+          </div>
+          <div className="about-section3">
+            <div className="about-section3-content">
+              <h3>What Sets Us Apart</h3>
+              <p>
+                Curated Selection Our team of passionate curators meticulously
+                selects each title in our collection. From timeless classics to
+                contemporary gems, we strive to offer a thoughtfully curated
+                selection that spans genres and cultures.
+              </p>
+            </div>
+            <img className="about-section3" src={gif3} alt="" />
+          </div>
           <h3>Community Engagement</h3>
           <p>
             We cherish the sense of community that books foster. Join us in

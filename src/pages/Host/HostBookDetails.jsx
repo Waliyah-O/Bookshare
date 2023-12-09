@@ -28,18 +28,18 @@ const HostBookDetails = () => {
       <Link to=".." relative="path" className="back-button">
         <span> &larr; Back to all books</span>
       </Link>
-      <div className="host-van-detail-layout-container">
-        <div className="host-van-detail">
+      <div className="host-book-detail-layout-container">
+        <div className="host-book-detail">
           <img src={currentVan.imageUrl} alt="" />
-          <div className="host-van-detail-info-text">
+          <div className="host-book-detail-info-text">
             <i className={`van-type van-type-${currentVan.type}`}>
               {currentVan.type}
             </i>
             <h2>{currentVan.name}</h2>
-            <h4>${currentVan.price}/day</h4>
+            <h4>${currentVan.price}</h4>
           </div>
         </div>
-        <nav className="host-van-detail-nav">
+        <nav className="host-book-detail-nav">
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : null)}
             to="."

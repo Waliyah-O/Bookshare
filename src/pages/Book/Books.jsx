@@ -24,12 +24,16 @@ const Books = () => {
   );
   const typeFilter = searchParams.get("type");
   // console.log(typeFilter);
-  console.log(searchParams.toString());
+  // console.log(searchParams.toString());
 
   function handleFilterChange(key, value) {
     setSearchParams((prevParams) => {
       if (value === null) {
-        prevParams.delete(key);
+        // Clear both the filter and the search term
+        prevParams.delete("type");
+        prevParams.delete("search");
+        setSearchTerm("");
+        handleSearch("");
       } else {
         prevParams.set(key, value);
       }
@@ -80,7 +84,6 @@ const Books = () => {
             <h3>{book.name}</h3>
             <p>
               ${book.price}
-              <span>/day</span>
             </p>
           </div>
           <i className={`van-type ${book.type} selected`}>{book.type}</i>
@@ -134,8 +137,8 @@ const Books = () => {
           <div className="van-list">{bookElements}</div>
         ) : (
           <p>
-            Sorry we don't have that book yet. <br /> Would you like to search for
-            another?
+            Sorry we don't have that book yet. <br /> Would you like to search
+            for another?
           </p>
         )}
       </>
