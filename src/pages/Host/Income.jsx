@@ -7,7 +7,11 @@ const Income = () => {
   ];
   return (
     <section className="host-income">
+<<<<<<< HEAD
       <h1>Income</h1>
+=======
+      <h1>Earnings</h1>
+>>>>>>> 16289cf57e600de90f64c61c7f36fddaeb0ad680
       <p>
         Last <span>30 days</span>
       </p>

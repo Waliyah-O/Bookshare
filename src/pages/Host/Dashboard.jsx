@@ -11,12 +11,17 @@ export async function loader({ request }) {
     response.body = true;
     return response;
   }
+<<<<<<< HEAD
   return defer({ vans: getHostBooks() });
+=======
+  return defer({ books: getHostBooks() });
+>>>>>>> 16289cf57e600de90f64c61c7f36fddaeb0ad680
 }
 
 const HostDashboard = () => {
   const dataPromise = useLoaderData();
 
+<<<<<<< HEAD
   function renderVanElements(vans) {
     const hostVansEls = vans.map((van) => (
       <div className="host-van-single" key={van.id}>
@@ -26,12 +31,27 @@ const HostDashboard = () => {
           <p>${van.price}/day</p>
         </div>
         <Link to={`vans/${van.id}`}>View</Link>
+=======
+  function renderVanElements(books) {
+    const hostBooksEls = books.map((book) => (
+      <div className="host-van-single" key={book.id}>
+        <img src={book.imageUrl} alt={`Photo of ${book.name}`} />
+        <div className="host-van-info">
+          <h3>{book.name}</h3>
+          <p>${book.price}</p>
+        </div>
+        <Link to={`books/${book.id}`}>View</Link>
+>>>>>>> 16289cf57e600de90f64c61c7f36fddaeb0ad680
       </div>
     ));
 
     return (
       <div className="host-vans-list">
+<<<<<<< HEAD
         <section>{hostVansEls}</section>
+=======
+        <section>{hostBooksEls}</section>
+>>>>>>> 16289cf57e600de90f64c61c7f36fddaeb0ad680
       </div>
     );
   }
@@ -42,7 +62,11 @@ const HostDashboard = () => {
         <div className="info">
           <h1>Welcome!</h1>
           <p>
+<<<<<<< HEAD
             Income last <span>30 days</span>
+=======
+            Earnings last <span>30 days</span>
+>>>>>>> 16289cf57e600de90f64c61c7f36fddaeb0ad680
           </p>
           <h2>$2,260</h2>
         </div>
@@ -59,7 +83,11 @@ const HostDashboard = () => {
       <section className="host-dashboard-vans">
         <div className="top">
           <h2>Your listed books</h2>
+<<<<<<< HEAD
           <Link to="vans">View all</Link>
+=======
+          <Link to="books">View all</Link>
+>>>>>>> 16289cf57e600de90f64c61c7f36fddaeb0ad680
         </div>
         <Suspense
           fallback={
@@ -68,7 +96,11 @@ const HostDashboard = () => {
             </>
           }
         >
+<<<<<<< HEAD
           <Await resolve={dataPromise.vans}>{renderVanElements}</Await>
+=======
+          <Await resolve={dataPromise.books}>{renderVanElements}</Await>
+>>>>>>> 16289cf57e600de90f64c61c7f36fddaeb0ad680
         </Suspense>
       </section>
     </>

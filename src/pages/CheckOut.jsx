@@ -10,7 +10,6 @@ import {
   Link,
 } from "react-router-dom";
 import { getBooks } from "../api/bookapi";
-
 export function loader({ params }) {
   return getBooks(params.id);
 }
@@ -25,12 +24,12 @@ const CheckoutPage = ({ price }) => {
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [rentDuration, setRentDuration] = useState(1);
-  const van = useLoaderData();
+  const book = useLoaderData();
   const { id } = useParams();
 
-  const amount = van.price || 0;
+  const amount = book.price || 0;
 
-  const publicKey = "pk_test_23f26f6e7e1df8a8e8fbf63d7e8e652399a1ab51"
+  const publicKey = "pk_test_23f26f6e7e1df8a8e8fbf63d7e8e652399a1ab51";
   // Function to format a number as Naira currency
   const formatAsNaira = (amount) => {
     return new Intl.NumberFormat("en-NG", {
@@ -61,48 +60,42 @@ const CheckoutPage = ({ price }) => {
 
   return (
     <div className="checkout-container">
-      {paymentSuccess ? (
+      { paymentSuccess ? (
         <div className="success-container">
-          {/* <p>Hi {fullName}!</p> */}
+          {/* <p>Hi {fullName}!</p> */ }
           <h2>Payment Successful!</h2>
-          <p>An email confirmation has been sent to {email}.</p>
+          <p>An email confirmation has been sent to { email }.</p>
           <p>
             Please contact Bab for your van and further instructions
             <AiOutlineMail /> b@b.com <MdWifiCalling2 /> 08012345678 for the
             keys to the rig you are renting and further instructions
           </p>
-          <Link to="/vans" className="van-type">
-            back to all vans
+          <Link to="/books" className="van-type">
+            back to all books
           </Link>
         </div>
       ) : (
         <div
-          style={{
+          style={ {
             display: "flex",
             width: "100vw",
             height: "100%",
             alignItems: "center",
             justifyContent: "space-evenly",
-            padding: '10px',
-            gap: '1em'
-          }}
+            padding: "10px",
+            gap: "1em",
+          } }
           className="checkout-deets"
         >
           <div>
             <h3>Checkout Details</h3>
             <p>
-              you are paying <strong>${van.price} /day</strong> for:
-              <input
-                type="text"
-                value={rentDuration}
-                onInput={(e) => setRentDuration(e.target.value)}
-                style={{ width: "30px" }}
-              />
-              days
+              you are paying <strong>${ book.price }</strong> for:
             </p>
-            <p>Van ID: {van.id}</p>
-            <img style={{ width: "110px" }} src={van.imageUrl} alt="" />
-            <p style={{ width: "200px", fontSize: "11px" }}>
+            <p>Book Name: { book.name }</p>
+            <p>Book ID: { book.id }</p>
+            <img style={ { width: "110px" } } src={ book.imageUrl } alt="" />
+            <p style={ { width: "200px", fontSize: "11px" } }>
               <strong>Disclaimer:</strong>failure to return rig at the end of
               stipulated time will cost you your deposit as well as additional
               fees.
@@ -115,8 +108,8 @@ const CheckoutPage = ({ price }) => {
                   <label>Full Name:</label>
                   <input
                     type="text"
-                    value={fullName}
-                    onInput={(e) => setFullName(e.target.value)}
+                    value={ fullName }
+                    onInput={ (e) => setFullName(e.target.value) }
                   />
                 </div>
 
@@ -124,8 +117,8 @@ const CheckoutPage = ({ price }) => {
                   <label>Email Address:</label>
                   <input
                     type="text"
-                    value={email}
-                    onInput={(e) => setEmail(e.target.value)}
+                    value={ email }
+                    onInput={ (e) => setEmail(e.target.value) }
                   />
                 </div>
 
@@ -133,18 +126,19 @@ const CheckoutPage = ({ price }) => {
                   <label>Phone Number:</label>
                   <input
                     type="text"
-                    value={phoneNumber}
-                    onInput={(e) => setPhoneNumber(e.target.value)}
+                    value={ phoneNumber }
+                    onInput={ (e) => setPhoneNumber(e.target.value) }
                   />
                 </div>
               </div>
 
               <div className="checkout-amount">
-                <h4>Total amount in USD: ${amount * rentDuration}.00</h4>
+                <h4>Total amount in USD: ${ amount * rentDuration }.00</h4>
                 <h4>
-                  Total amount in Naira: {formatAsNaira(amount * 300 * rentDuration)}.00
+                  Total amount in Naira:{ " " }
+                  { formatAsNaira(amount * 300 * rentDuration) }.00
                 </h4>
-                <p style={{ fontSize: "10px" }}>
+                <p style={ { fontSize: "10px" } }>
                   *you will be charged in naira!
                 </p>
               </div>
@@ -153,17 +147,17 @@ const CheckoutPage = ({ price }) => {
                 <PaystackButton
                   text="Pay with Paystack"
                   className="paystackBtn"
-                  email={email}
-                  amount={amount * 100 * 300} // Convert to kobo
-                  publicKey={publicKey}
-                  onSuccess={onSuccess}
-                  onClose={onClose}
+                  email={ email }
+                  amount={ amount * 100 * 300 } // Convert to kobo
+                  publicKey={ publicKey }
+                  onSuccess={ onSuccess }
+                  onClose={ onClose }
                 />
               </div>
             </div>
           </div>
         </div>
-      )}
+      ) }
     </div>
   );
 };

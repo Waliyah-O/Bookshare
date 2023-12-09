@@ -55,10 +55,10 @@ const CreateBookForm = () => {
     e.preventDefault();
 
     axios
-      .post("/api/vans", formData)
+      .post("/api/books", formData)
       .then((response) => {
         // console.log("Response from server:", response);
-        alert(`Status: van ${response.statusText}` )
+        alert(`Status: van ${response.statusText}`)
 
         if (response.data.id !== undefined) {
           // Save the van data to local storage
@@ -99,16 +99,16 @@ const CreateBookForm = () => {
 
   return (
     <>
-      <h3>Add new van</h3>
-      <form action="" onSubmit={handleSubmit}>
+      <h3>Add new book</h3>
+      <form action="" onSubmit={ handleSubmit }>
         <div>
           <label htmlFor="">Name:</label>
           <input
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleInputChange}
+            value={ formData.name }
+            onChange={ handleInputChange }
           />
         </div>
         <div>
@@ -117,8 +117,8 @@ const CreateBookForm = () => {
             type="number"
             id="price"
             name="price"
-            value={formData.price}
-            onChange={handleInputChange}
+            value={ formData.price }
+            onChange={ handleInputChange }
           />
         </div>
         <div>
@@ -127,22 +127,22 @@ const CreateBookForm = () => {
             type="text"
             id="description"
             name="description"
-            value={formData.description}
-            onChange={handleInputChange}
+            value={ formData.description }
+            onChange={ handleInputChange }
           />
         </div>
-        <div style={{ display: "flex", gap: "1em" }}>
+        <div style={ { display: "flex", gap: "1em" } }>
           <div>
             <select
-              value={formData.type}
+              value={ formData.type }
               id="type"
               name="type"
-              onChange={handleInputChange}
+              onChange={ handleInputChange }
             >
               <option value="">Select option</option>
-              <option value="simple">simple</option>
-              <option value="luxury">luxury</option>
-              <option value="rugged">rugged</option>
+              <option value="novel">Novel</option>
+              <option value="book">Book</option>
+              <option value="article">Article</option>
             </select>
           </div>
           <div>
@@ -150,8 +150,8 @@ const CreateBookForm = () => {
               type="text"
               id="type"
               name="type"
-              value={formData.type}
-              onChange={handleInputChange}
+              value={ formData.type }
+              onChange={ handleInputChange }
             />
           </div>
         </div>
@@ -161,8 +161,8 @@ const CreateBookForm = () => {
             type="text"
             id="imageUrl"
             name="imageUrl"
-            value={formData.imageUrl}
-            onChange={handleInputChange}
+            value={ formData.imageUrl }
+            onChange={ handleInputChange }
           />
         </div>
         <div>
@@ -171,8 +171,8 @@ const CreateBookForm = () => {
             type="number"
             id="hostId"
             name="hostId"
-            value={formData.hostId}
-            onChange={handleInputChange}
+            value={ formData.hostId }
+            onChange={ handleInputChange }
           />
         </div>
         <button type="submit">submit</button>

@@ -40,54 +40,54 @@ const Header = () => {
     <>
       <header>
         <Link className="site-logo" to="/">
-          #bookshare
+          book<span style={ { color: "#ff8c38" } }>share</span>
         </Link>
         <nav>
           <NavLink
             to="/host"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
+            className={ ({ isActive }) => (isActive ? "active-link" : null) }
           >
             Host
           </NavLink>
           <NavLink
             to="/about"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
+            className={ ({ isActive }) => (isActive ? "active-link" : null) }
           >
             About page
           </NavLink>
           <NavLink
             to="/books"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
+            className={ ({ isActive }) => (isActive ? "active-link" : null) }
           >
             Books
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/blog"
             className={({ isActive }) => (isActive ? "active-link" : null)}
           >
             Blog
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/contact"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
+            className={ ({ isActive }) => (isActive ? "active-link" : null) }
           >
             Contact us
           </NavLink>
 
-          {isLoggedIn ? (
-            <div onClick={fakeLogOut}>
+          { isLoggedIn ? (
+            <div onClick={ fakeLogOut }>
               <NavLink>
                 <FiLogOut />
               </NavLink>
             </div>
           ) : (
             <NavLink to="login" className="login-link">
-              <img src={avatarIcon} alt="avatar-icon" />
-              {/* <FiLogIn /> */}
+              <img src={ avatarIcon } alt="avatar-icon" />
+              {/* <FiLogIn /> */ }
             </NavLink>
-          )}
+          ) }
         </nav>
-        <Sidebar fakeLogOut={fakeLogOut} isLoggedIn={isLoggedIn} />
+        <Sidebar fakeLogOut={ fakeLogOut } isLoggedIn={ isLoggedIn } />
       </header>
     </>
   );
