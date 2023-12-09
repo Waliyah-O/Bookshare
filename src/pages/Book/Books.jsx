@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import {
   Link,
   useSearchParams,
@@ -16,6 +16,7 @@ export function loader() {
 }
 
 const Books = () => {
+  const searchRef = useRef()
   const [searchParams, setSearchParams] = useSearchParams();
   const dataPromise = useLoaderData();
 
@@ -34,6 +35,7 @@ const Books = () => {
         prevParams.delete("search");
         setSearchTerm("");
         handleSearch("");
+        searchRef.current.value = ''
       } else {
         prevParams.set(key, value);
       }
@@ -96,8 +98,8 @@ const Books = () => {
         <div className="van-list-filter-buttons">
           <button
             className={ `${typeFilter === "novel"
-                ? "van-type novel selected"
-                : "van-type novel"
+              ? "van-type novel selected"
+              : "van-type novel"
               }` }
             onClick={ () => handleFilterChange("type", "novel") }
           >
@@ -112,15 +114,18 @@ const Books = () => {
           </button>
           <button
             className={ `${typeFilter === "article"
-                ? "van-type article selected"
-                : "van-type article"
+              ? "van-type article selected"
+              : "van-type article"
               }` }
             onClick={ () => handleFilterChange("type", "article") }
           >
             Articles
           </button>
 
-          <SearchBar onSearch={ handleSearch } />
+          <SearchBar
+            onSearch={ handleSearch }
+            searchRef={ searchRef }
+          />
           { searchTerm || typeFilter ? (
             <button
               className="van-type clear-filters"
