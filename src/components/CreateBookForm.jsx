@@ -99,7 +99,7 @@ const CreateBookForm = () => {
 
   return (
     <>
-      <h3>Add new van</h3>
+      <h3>Add new book</h3>
       <form action="" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="">Name:</label>

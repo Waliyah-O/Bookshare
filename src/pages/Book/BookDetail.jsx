@@ -34,7 +34,7 @@ export default function VanDetail() {
               state: { book },
             }}
           >
-            Rent this van
+            Buy this book
           </Link>
         </button>
       </div>

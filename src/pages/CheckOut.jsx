@@ -10,7 +10,6 @@ import {
   Link,
 } from "react-router-dom";
 import { getBooks } from "../api/bookapi";
-
 export function loader({ params }) {
   return getBooks(params.id);
 }
@@ -25,12 +24,12 @@ const CheckoutPage = ({ price }) => {
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [rentDuration, setRentDuration] = useState(1);
-  const van = useLoaderData();
+  const book = useLoaderData();
   const { id } = useParams();
 
-  const amount = van.price || 0;
+  const amount = book.price || 0;
 
-  const publicKey = "pk_test_23f26f6e7e1df8a8e8fbf63d7e8e652399a1ab51"
+  const publicKey = "pk_test_23f26f6e7e1df8a8e8fbf63d7e8e652399a1ab51";
   // Function to format a number as Naira currency
   const formatAsNaira = (amount) => {
     return new Intl.NumberFormat("en-NG", {
@@ -83,25 +82,19 @@ const CheckoutPage = ({ price }) => {
             height: "100%",
             alignItems: "center",
             justifyContent: "space-evenly",
-            padding: '10px',
-            gap: '1em'
+            padding: "10px",
+            gap: "1em",
           }}
           className="checkout-deets"
         >
           <div>
             <h3>Checkout Details</h3>
             <p>
-              you are paying <strong>${van.price} /day</strong> for:
-              <input
-                type="text"
-                value={rentDuration}
-                onInput={(e) => setRentDuration(e.target.value)}
-                style={{ width: "30px" }}
-              />
-              days
+              you are paying <strong>${book.price}</strong> for:
             </p>
-            <p>Van ID: {van.id}</p>
-            <img style={{ width: "110px" }} src={van.imageUrl} alt="" />
+            <p>Book Name: {book.name}</p>
+            <p>Book ID: {book.id}</p>
+            <img style={{ width: "110px" }} src={book.imageUrl} alt="" />
             <p style={{ width: "200px", fontSize: "11px" }}>
               <strong>Disclaimer:</strong>failure to return rig at the end of
               stipulated time will cost you your deposit as well as additional
@@ -142,7 +135,8 @@ const CheckoutPage = ({ price }) => {
               <div className="checkout-amount">
                 <h4>Total amount in USD: ${amount * rentDuration}.00</h4>
                 <h4>
-                  Total amount in Naira: {formatAsNaira(amount * 300 * rentDuration)}.00
+                  Total amount in Naira:{" "}
+                  {formatAsNaira(amount * 300 * rentDuration)}.00
                 </h4>
                 <p style={{ fontSize: "10px" }}>
                   *you will be charged in naira!

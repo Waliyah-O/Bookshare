@@ -16,8 +16,8 @@ const HomePage = () => {
         Together, let's rewrite stories and build a brighter future for all.
       </p>
       <div className="home-buttons">
-        <Link to="books">Find a Book</Link>
-        <Link to="books">Donate???????</Link>
+        <Link to="books">Buy a Book</Link>
+        <Link to="login">Sell your old books</Link>
       </div>
     </div>
   );
