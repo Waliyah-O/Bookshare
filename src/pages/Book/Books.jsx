@@ -52,7 +52,7 @@ const Books = () => {
           <div className="van-info">
             <h3>{book.name}</h3>
             <p>
-              ${book.price}
+            &#8358;{book.price}
               <span>/day</span>
             </p>
           </div>
