@@ -24,7 +24,7 @@ function AboutPage() {
         <div className="about-page-content">
           <div className="about-section2">
             <img src={gif2} alt="" />
-            <div >
+            <div>
               <h3>Our Mission</h3>
               <p>
                 At {bookShare}, our mission is to curate a diverse collection of
@@ -49,19 +49,6 @@ function AboutPage() {
             </div>
             <img className="about-section3" src={gif3} alt="" />
           </div>
-          <h3>Community Engagement</h3>
-          <p>
-            We cherish the sense of community that books foster. Join us in
-            discussions, author interviews, and book clubs to connect with
-            fellow readers who share your interests. Together, let's celebrate
-            the beauty of storytelling.
-          </p>
-          <h3>Exceptional Service</h3>
-          <p>
-            Your reading experience is our top priority. Our user-friendly
-            website, secure payment options, and prompt delivery ensure that
-            your journey with {bookShare} is seamless and enjoyable.
-          </p>
           <h3>Contact Us</h3>
           <p>
             Have questions or suggestions? We'd love to hear from you! Reach out
@@ -75,13 +62,13 @@ function AboutPage() {
           <h2>
             Thank you for choosing {bookShare} as your literary companion. Happy
             reading!
-          </h2>
+          </h2> ``
         </div>
         <div className="about-page-cta">
           <h2>Your books are ready.</h2>
           <div className="about-buttons">
             <Link className="link-button" to="/books">
-              Explore our Books
+              Explore
             </Link>
           </div>
         </div>

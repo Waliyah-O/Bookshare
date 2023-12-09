@@ -248,7 +248,6 @@ footer {
 
 .about-section2,
 .about-section3 {
-  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
