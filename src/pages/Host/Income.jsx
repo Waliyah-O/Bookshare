@@ -7,18 +7,14 @@ const Income = () => {
   ];
   return (
     <section className="host-income">
-<<<<<<< HEAD
-      <h1>Income</h1>
-=======
       <h1>Earnings</h1>
->>>>>>> 16289cf57e600de90f64c61c7f36fddaeb0ad680
       <p>
         Last <span>30 days</span>
       </p>
       <h2>$2,260</h2>
       <img
         className="graph"
-        src={incomeGraph}
+        src={ incomeGraph }
         alt="Income graph"
       />
       <div className="info-header">
@@ -28,12 +24,12 @@ const Income = () => {
         </p>
       </div>
       <div className="transactions">
-        {transactionsData.map((item) => (
-          <div key={item.id} className="transaction">
-            <h3>${item.amount}</h3>
-            <p>{item.date}</p>
+        { transactionsData.map((item) => (
+          <div key={ item.id } className="transaction">
+            <h3>${ item.amount }</h3>
+            <p>{ item.date }</p>
           </div>
-        ))}
+        )) }
       </div>
     </section>
   );
