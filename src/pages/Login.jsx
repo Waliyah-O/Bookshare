@@ -4,6 +4,7 @@ import {
   redirect,
   useActionData,
   useNavigation,
+  Link,
 } from "react-router-dom";
 
 import { loginUser } from "../api/bookapi";
@@ -31,7 +32,7 @@ export async function action({ request }) {
   } catch (err) {
     return err.message;
   }
-  
+
   // save user data.user in local storage
   // save token in a cookie
 }
@@ -54,6 +55,17 @@ const Login = () => {
         <button disabled={navigation.state === "submitting"}>
           {navigation.state === "submitting" ? "Logging in..." : "Log in"}
         </button>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            fontSize: "13px",
+          }}
+        >
+          <Link to="/signup">Sign up</Link>
+          <Link to="/forgotpassword">forgot password</Link>
+        </div>
       </Form>
     </div>
   );
