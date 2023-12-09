@@ -99,7 +99,7 @@ const CreateBookForm = () => {
 
   return (
     <>
-      <h3>Add new van</h3>
+      <h3>Add new book</h3>
       <form action="" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="">Name:</label>
@@ -140,9 +140,9 @@ const CreateBookForm = () => {
               onChange={handleInputChange}
             >
               <option value="">Select option</option>
-              <option value="simple">simple</option>
-              <option value="luxury">luxury</option>
-              <option value="rugged">rugged</option>
+              <option value="novel">Novel</option>
+              <option value="book">Book</option>
+              <option value="article">Article</option>
             </select>
           </div>
           <div>

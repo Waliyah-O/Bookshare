@@ -17,9 +17,9 @@ const Sidebar = ({ isLoggedIn, fakeLogOut }) => {
           <li>
             <NavLink to="books">Books</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="blog">Blog</NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="contact">Contact us</NavLink>
           </li>

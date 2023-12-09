@@ -6,7 +6,7 @@ const HostVanPhotos = () => {
   return (
     <div>
       <img
-        className="host-van-detail-image"
+        className="host-book-detail-image"
         src={currentVan.imageUrl}
         alt={`Photo of ${currentVan.name}`}
       />

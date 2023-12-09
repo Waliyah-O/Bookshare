@@ -13,14 +13,14 @@ export async function loader({ request }) {
 const HostBooks = () => {
   const dataPromise = useLoaderData();
 
-  function renderVanElements(books) {
+  function renderBookElements(books) {
     const hostBooksEls = books.map((book) => (
       <Link to={book.id} key={book.id} className="host-van-link-wrapper">
         <div className="host-van-single" key={book.id}>
           <img src={book.imageUrl} alt={`Photo of ${book.name}`} />
           <div className="host-van-info">
             <h3>{book.name}</h3>
-            <p>${book.price}/day</p>
+            <p>${book.price}</p>
           </div>
         </div>
       </Link>
@@ -66,7 +66,7 @@ const HostBooks = () => {
           </>
         }
       >
-        <Await resolve={dataPromise.vans}>{renderVanElements}</Await>
+        <Await resolve={dataPromise.books}>{renderBookElements}</Await>
       </Suspense>
     </div>
   );
