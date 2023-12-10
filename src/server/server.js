@@ -127,7 +127,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare11,
-      type: "books",
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -137,7 +137,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare12,
-      type: "novels",
+      type: "novel",
       hostId: "456",
     });
     server.create("book", {
@@ -147,7 +147,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare13,
-      type: "books",
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -157,7 +157,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare14,
-      type: "novels",
+      type: "novel",
       hostId: "456",
     });
     server.create("book", {
@@ -167,7 +167,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare15,
-      type: "books",
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -177,7 +177,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare16,
-      type: "books",
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -187,7 +187,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare17,
-      type: "books",
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -197,7 +197,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare18,
-      type: "books",
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -207,7 +207,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare19,
-      type: "articles",
+      type: "article",
       hostId: "456",
     });
     server.create("book", {
@@ -217,7 +217,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare20,
-      type: "books",
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -227,7 +227,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare21,
-      type: "novelss",
+      type: "novel",
       hostId: "456",
     });
     server.create("book", {
@@ -237,7 +237,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare22,
-      type: "novels",
+      type: "novel",
       hostId: "456",
     });
     server.create("book", {
@@ -247,7 +247,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare23,
-      type: "articles",
+      type: "article",
       hostId: "456",
     });
     server.create("book", {
@@ -257,7 +257,7 @@ createServer({
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       imageUrl: Bookshare24,
-      type: "books",
+      type: "book",
       hostId: "456",
     });
     server.create("user", {

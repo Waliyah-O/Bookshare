@@ -675,7 +675,7 @@ i[class*="van-type-"] {
   display: flex;
   flex-direction: column;
   width: 93%;
-  max-width: 200px;
+  max-width: 300px;
   gap: 2px;
 }
 
@@ -691,7 +691,7 @@ i[class*="van-type-"] {
 }
 
 .search-form > input:focus {
-  width: 600px;
+  /* width: 500px; */
   outline: none;
 }
 

@@ -96,9 +96,7 @@ const CheckoutPage = ({ price }) => {
             <p>Book ID: { book.id }</p>
             <img style={ { width: "110px" } } src={ book.imageUrl } alt="" />
             <p style={ { width: "200px", fontSize: "11px" } }>
-              <strong>Disclaimer:</strong>failure to return rig at the end of
-              stipulated time will cost you your deposit as well as additional
-              fees.
+              <strong>Disclaimer:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, harum!
             </p>
           </div>
           <div className="checkout-form">
