@@ -310,11 +310,11 @@ createServer({
       return schema.books.findBy({ id, hostId: "456" });
     });
 
-    this.post("/vans", (schema, request) => {
+    this.post("/books", (schema, request) => {
       const attrs = JSON.parse(request.requestBody);
-      const newVanId = new Date().getTime();
-      attrs.id = newVanId;
-      return schema.vans.create(attrs);
+      const newBookId = new Date().getTime();
+      attrs.id = newBookId;
+      return schema.books.create(attrs);
     });
 
     this.post(

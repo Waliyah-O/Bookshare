@@ -48,3 +48,25 @@ export async function loginUser(creds) {
 
   return data
 }
+
+export async function signupUser(creds) {
+  const res = await fetch("/api/signup", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(creds),
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw {
+      message: data.message,
+      statusText: res.statusText,
+      status: res.status,
+    };
+  }
+
+  return data;
+}
