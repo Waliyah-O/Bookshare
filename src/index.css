@@ -1073,3 +1073,171 @@ img.graph {
   text-decoration: underline;
   color: #161616;
 }
+.about-hero-content1{
+  width: 800px;
+  color: black;
+  font-family: 'EB Garamond', serif;
+  font-size: larger;
+
+}
+.us-apart{
+  font-family: 'EB Garamond', serif;
+  font-size: larger;
+}
+/* .about-mission {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+} */
+
+.about-mission-content{
+  margin-left: 2rem;
+  width:700px;
+  font-family: 'EB Garamond', serif;
+ font-size: larger;
+}
+/* .about-section3-h3{
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+} */
+.about-contact {
+  margin-top: 3rem;
+ 
+}
+.contact-us-content  {
+  text-align: center;
+  justify-content: center;
+margin-right: 4rem;
+}
+  .about-contact-us {
+    text-align: center;
+    justify-content: center;
+    font-size: xx-large;
+  font-weight: 800;
+  }
+  
+  .thank-you {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: larger;
+  }
+  .about-contents{
+    text-align: center;
+    margin-left: 2rem;
+    margin-top: 6rem;
+    font-family: 'EB Garamond', serif;
+    font-size: larger;
+  
+   
+  }
+
+  .content {
+    position: relative;
+    bottom: 240px;
+   margin-left: 40rem;
+  }
+  /* .content-text{
+    text-align: center;
+    justify-content: center;
+    
+  } */
+  
+  .content h2 {
+    color: #fff;
+    font-size: 3em;
+    position: absolute;
+    
+    transform: translate(-50%, -50%);
+  }
+  
+  .content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+  }
+  
+  .content h2:nth-child(2) {
+    color: black;
+    animation: animate 4s ease-in-out infinite;
+  }
+  
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+
+  
+  .contents {
+    position: relative;
+    /* left: 50%; */
+    margin-left: 210px;
+    bottom: 70px;
+  }
+
+  .contents h3 {
+    color: #fff;
+    font-size: 3em;
+    position: absolute;
+    
+    transform: translate(-50%, -50%);
+  }
+  
+  .contents h3:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+  }
+  
+  .contents h3:nth-child(2) {
+    color: black;
+    animation: animate 4s ease-in-out infinite;
+  }
+  .our-mission {
+    position: relative;
+    /* left: 50%; */
+    margin-left: 23rem;
+    bottom: 70px;
+  }
+
+  .our-mission h3 {
+    color: #fff;
+    font-size: 3em;
+    position: absolute;
+    
+    transform: translate(-50%, -50%);
+  }
+  
+  .our-mission h3:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+  }
+  
+  .our-mission h3:nth-child(2) {
+    color: black;
+    animation: animate 4s ease-in-out infinite;
+  }
