@@ -15,12 +15,12 @@ const HostBooks = () => {
 
   function renderBookElements(books) {
     const hostBooksEls = books.map((book) => (
-      <Link to={ book.id } key={ book.id } className="host-van-link-wrapper">
-        <div className="host-van-single" key={ book.id }>
-          <img src={ book.imageUrl } alt={ `Photo of ${book.name}` } />
+      <Link to={book.id} key={book.id} className="host-van-link-wrapper">
+        <div className="host-van-single" key={book.id}>
+          <img src={book.imageUrl} alt={`Photo of ${book.name}`} />
           <div className="host-van-info">
-            <h3>{ book.name }</h3>
-            <p>&#8358;{ book.price }</p>
+            <h3>{book.name}</h3>
+            <p>&#8358;{book.price}</p>
           </div>
         </div>
       </Link>
@@ -29,9 +29,9 @@ const HostBooks = () => {
       <>
         <div className="host-vans-list">
           <div>
-            <section>{ hostBooksEls }</section>
-          </div >
-        </div >
+            <section>{hostBooksEls}</section>
+          </div>
+        </div>
       </>
     );
   }
@@ -66,9 +66,9 @@ const HostBooks = () => {
           </>
         }
       >
-        <Await resolve={ dataPromise.books }>{ renderBookElements }</Await>
+        <Await resolve={dataPromise.books}>{renderBookElements}</Await>
       </Suspense>
-    </div >
+    </div>
   );
 };
 
