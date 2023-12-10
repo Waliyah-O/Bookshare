@@ -23,7 +23,7 @@ const HostDashboard = () => {
         <img src={ book.imageUrl } alt={ `Photo of ${book.name}` } />
         <div className="host-van-info">
           <h3>{ book.name }</h3>
-          <p>${ book.price }</p>
+          <p>&#8358;{ book.price }</p>
         </div>
         <Link to={ `books/${book.id}` }>View</Link>
       </div>
@@ -44,7 +44,7 @@ const HostDashboard = () => {
           <p>
             Earnings last <span>30 days</span>
           </p>
-          <h2>$2,260</h2>
+          <h2>&#8358;2,260</h2>
         </div>
         <Link to="income">Details</Link>
       </section>
