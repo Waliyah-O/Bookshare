@@ -90,15 +90,13 @@ const CheckoutPage = ({ price }) => {
           <div>
             <h3>Checkout Details</h3>
             <p>
-              you are paying <strong>${ book.price }</strong> for:
+              you are paying <strong>&#8358;{ book.price }</strong> for:
             </p>
             <p>Book Name: { book.name }</p>
             <p>Book ID: { book.id }</p>
             <img style={ { width: "110px" } } src={ book.imageUrl } alt="" />
             <p style={ { width: "200px", fontSize: "11px" } }>
-              <strong>Disclaimer:</strong>failure to return rig at the end of
-              stipulated time will cost you your deposit as well as additional
-              fees.
+              <strong>Disclaimer:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, harum!
             </p>
           </div>
           <div className="checkout-form">
@@ -133,14 +131,7 @@ const CheckoutPage = ({ price }) => {
               </div>
 
               <div className="checkout-amount">
-                <h4>Total amount in USD: ${ amount * rentDuration }.00</h4>
-                <h4>
-                  Total amount in Naira:{ " " }
-                  { formatAsNaira(amount * 300 * rentDuration) }.00
-                </h4>
-                <p style={ { fontSize: "10px" } }>
-                  *you will be charged in naira!
-                </p>
+                <h4>Total amount &#8358;{ amount * rentDuration }.00</h4>
               </div>
 
               <div className="paystackBtnDiv">

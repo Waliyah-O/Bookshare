@@ -20,7 +20,9 @@ import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import Blog from "./pages/Blog";
 import Books, { loader as BooksPageLoader } from "./pages/Book/Books";
-import BookDetail, { loader as BookDetailLoader } from "./pages/Book/BookDetail";
+import BookDetail, {
+  loader as BookDetailLoader,
+} from "./pages/Book/BookDetail";
 import HostDashboard, {
   loader as hostDashboardLoader,
 } from "./pages/Host/Dashboard";
@@ -39,12 +41,15 @@ import Login, {
   loader as loginLoader,
   action as loginAction,
 } from "./pages/Login";
+import SignUp, {
+  loader as signupLoader,
+  action as signupAction,
+} from "./pages/Signup";
 
 import { requireAuth } from "./utils";
 import ContactUs from "./pages/ContactUs";
 import CheckoutPage, { loader as checkoutLoader } from "./pages/CheckOut";
 import SuccessPage from "./pages/SuccessPage";
-import SignUp from "./pages/Signup";
 import CreateBookForm from "./components/CreateBookForm";
 
 const router = createBrowserRouter(
@@ -60,7 +65,12 @@ const router = createBrowserRouter(
         loader={loginLoader}
         action={loginAction}
       />
-      <Route path="signup" element={<SignUp />} />
+      <Route
+        path="signup"
+        element={<SignUp />}
+        loader={signupLoader}
+        action={signupAction}
+      />
       <Route
         path="book/:id/checkout"
         element={<CheckoutPage />}

@@ -6,7 +6,7 @@ export function loader({ params }) {
   return getBooks(params.id);
 }
 
-export default function VanDetail() {
+export default function BookDetail() {
   const location = useLocation();
   const book = useLoaderData();
 
@@ -27,7 +27,7 @@ export default function VanDetail() {
           <div className="book-detail-content">
             <h2>{ book.name }</h2>
             <p className="van-price">
-              <span>${ book.price }</span>
+              <span>&#8358;{ book.price }</span>
             </p>
             <p>{ book.description }</p>
             <button className="link-button">

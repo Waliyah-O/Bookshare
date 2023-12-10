@@ -86,7 +86,7 @@ const Books = () => {
             <h3>{ book.name }</h3>
             <p>
               &#8358;{ book.price }
-              <span>/day</span>
+              <span></span>
             </p>
           </div>
           <i className={ `van-type ${book.type} selected` }>{ book.type }</i>

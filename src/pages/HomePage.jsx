@@ -8,7 +8,7 @@ const HomePage = () => {
         <h1>Educating people, protecting the environment</h1>
         <div className="home-buttons">
           <Link to="books">Buy a Book</Link>
-          <Link to="login">Sell your old books</Link>
+          <Link to="signup">Sell your old books</Link>
         </div>
       </div>
       <div className="home-content">
