@@ -1,13 +1,13 @@
 import { createServer, Model, Response } from "miragejs";
 import {
-Bookshare1,Bookshare2,Bookshare3,
-Bookshare4,Bookshare5,Bookshare6,
-Bookshare7,Bookshare8,Bookshare9,
-Bookshare10,Bookshare11,Bookshare12,
-Bookshare13,Bookshare14,Bookshare15,
-Bookshare16,Bookshare17,Bookshare18,
-Bookshare19,Bookshare20,Bookshare21,
-Bookshare22,Bookshare23,Bookshare24,
+  Bookshare1, Bookshare2, Bookshare3,
+  Bookshare4, Bookshare5, Bookshare6,
+  Bookshare7, Bookshare8, Bookshare9,
+  Bookshare10, Bookshare11, Bookshare12,
+  Bookshare13, Bookshare14, Bookshare15,
+  Bookshare16, Bookshare17, Bookshare18,
+  Bookshare19, Bookshare20, Bookshare21,
+  Bookshare22, Bookshare23, Bookshare24,
 } from "../assets";
 
 createServer({
@@ -116,7 +116,7 @@ createServer({
       price: 2160,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare10,
+      imageUrl: Bookshare10,
       type: "book",
       hostId: "456",
     });
@@ -126,8 +126,8 @@ createServer({
       price: 3160,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare11,
-      type: "books",
+      imageUrl: Bookshare11,
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -136,8 +136,8 @@ createServer({
       price: 2160,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare12,
-      type: "novels",
+      imageUrl: Bookshare12,
+      type: "novel",
       hostId: "456",
     });
     server.create("book", {
@@ -146,8 +146,8 @@ createServer({
       price: 1600,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare13,
-      type: "books",
+      imageUrl: Bookshare13,
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -156,8 +156,8 @@ createServer({
       price: 1560,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare14,
-      type: "novels",
+      imageUrl: Bookshare14,
+      type: "novel",
       hostId: "456",
     });
     server.create("book", {
@@ -166,8 +166,8 @@ createServer({
       price: 1660,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare15,
-      type: "books",
+      imageUrl: Bookshare15,
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -176,8 +176,8 @@ createServer({
       price: 1960,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare16,
-      type: "books",
+      imageUrl: Bookshare16,
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -186,8 +186,8 @@ createServer({
       price: 1900,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare17,
-      type: "books",
+      imageUrl: Bookshare17,
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -196,8 +196,8 @@ createServer({
       price: 2210,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare18,
-      type: "books",
+      imageUrl: Bookshare18,
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -206,8 +206,8 @@ createServer({
       price: 3160,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare19,
-      type: "articles",
+      imageUrl: Bookshare19,
+      type: "article",
       hostId: "456",
     });
     server.create("book", {
@@ -216,8 +216,8 @@ createServer({
       price: 2560,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare20,
-      type: "books",
+      imageUrl: Bookshare20,
+      type: "book",
       hostId: "456",
     });
     server.create("book", {
@@ -226,8 +226,8 @@ createServer({
       price: 2060,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare21,
-      type: "novelss",
+      imageUrl: Bookshare21,
+      type: "novel",
       hostId: "456",
     });
     server.create("book", {
@@ -236,8 +236,8 @@ createServer({
       price: 1760,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare22,
-      type: "novels",
+      imageUrl: Bookshare22,
+      type: "novel",
       hostId: "456",
     });
     server.create("book", {
@@ -246,8 +246,8 @@ createServer({
       price: 1960,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare23,
-      type: "articles",
+      imageUrl: Bookshare23,
+      type: "article",
       hostId: "456",
     });
     server.create("book", {
@@ -256,8 +256,8 @@ createServer({
       price: 1100,
       description:
         "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl:Bookshare24,
-      type: "books",
+      imageUrl: Bookshare24,
+      type: "book",
       hostId: "456",
     });
     server.create("user", {
@@ -310,11 +310,11 @@ createServer({
       return schema.books.findBy({ id, hostId: "456" });
     });
 
-    this.post("/vans", (schema, request) => {
+    this.post("/books", (schema, request) => {
       const attrs = JSON.parse(request.requestBody);
-      const newVanId = new Date().getTime();
-      attrs.id = newVanId;
-      return schema.vans.create(attrs);
+      const newBookId = new Date().getTime();
+      attrs.id = newBookId;
+      return schema.books.create(attrs);
     });
 
     this.post(

@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import {
   Link,
   useSearchParams,
@@ -16,6 +16,7 @@ export function loader() {
 }
 
 const Books = () => {
+  const searchRef = useRef()
   const [searchParams, setSearchParams] = useSearchParams();
   const dataPromise = useLoaderData();
 
@@ -34,6 +35,7 @@ const Books = () => {
         prevParams.delete("search");
         setSearchTerm("");
         handleSearch("");
+        searchRef.current.value = ''
       } else {
         prevParams.set(key, value);
       }
@@ -60,34 +62,34 @@ const Books = () => {
 
     const filteredBooks = searchTerm
       ? displayedBooks.filter(
-          (book) =>
-            book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            book.id.toString().includes(searchTerm) ||
-            book.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            book.price.toString().includes(searchTerm) ||
-            book.type.toLowerCase().includes(searchTerm.toLowerCase())
-        )
+        (book) =>
+          book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          book.id.toString().includes(searchTerm) ||
+          book.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          book.price.toString().includes(searchTerm) ||
+          book.type.toLowerCase().includes(searchTerm.toLowerCase())
+      )
       : displayedBooks;
 
     const bookElements = filteredBooks.map((book) => (
-      <div key={book.id} className="van-tile">
-        {/* save search filters */}
+      <div key={ book.id } className="van-tile">
+        {/* save search filters */ }
         <Link
-          to={book.id}
-          state={{
+          to={ book.id }
+          state={ {
             search: `?${searchParams.toString()}`,
             type: typeFilter,
-          }}
+          } }
         >
-          <img className="van-image " src={book.imageUrl} alt="" />
+          <img className="van-image " src={ book.imageUrl } alt="" />
           <div className="van-info">
-            <h3>{book.name}</h3>
+            <h3>{ book.name }</h3>
             <p>
-            &#8358;{book.price}
-              <span>/day</span>
+              &#8358;{ book.price }
+              <span></span>
             </p>
           </div>
-          <i className={`van-type ${book.type} selected`}>{book.type}</i>
+          <i className={ `van-type ${book.type} selected` }>{ book.type }</i>
         </Link>
       </div>
     ));
@@ -95,53 +97,53 @@ const Books = () => {
       <>
         <div className="van-list-filter-buttons">
           <button
-            className={`${
-              typeFilter === "novel"
-                ? "van-type novel selected"
-                : "van-type novel"
-            }`}
-            onClick={() => handleFilterChange("type", "novel")}
+            className={ `${typeFilter === "novel"
+              ? "van-type novel selected"
+              : "van-type novel"
+              }` }
+            onClick={ () => handleFilterChange("type", "novel") }
           >
             Novels
           </button>
           <button
-            className={`${
-              typeFilter === "book" ? "van-type book selected" : "van-type book"
-            }`}
-            onClick={() => handleFilterChange("type", "book")}
+            className={ `${typeFilter === "book" ? "van-type book selected" : "van-type book"
+              }` }
+            onClick={ () => handleFilterChange("type", "book") }
           >
             Books
           </button>
           <button
-            className={`${
-              typeFilter === "article"
-                ? "van-type article selected"
-                : "van-type article"
-            }`}
-            onClick={() => handleFilterChange("type", "article")}
+            className={ `${typeFilter === "article"
+              ? "van-type article selected"
+              : "van-type article"
+              }` }
+            onClick={ () => handleFilterChange("type", "article") }
           >
             Articles
           </button>
 
-          <SearchBar onSearch={handleSearch} />
-          {searchTerm || typeFilter ? (
+          <SearchBar
+            onSearch={ handleSearch }
+            searchRef={ searchRef }
+          />
+          { searchTerm || typeFilter ? (
             <button
               className="van-type clear-filters"
-              onClick={() => handleFilterChange("type", null)}
+              onClick={ () => handleFilterChange("type", null) }
             >
               clear filter
             </button>
-          ) : null}
+          ) : null }
         </div>
-        {/* <div className="van-list">{bookElements}</div> */}
-        {filteredBooks.length > 0 ? (
-          <div className="van-list">{bookElements}</div>
+        {/* <div className="van-list">{bookElements}</div> */ }
+        { filteredBooks.length > 0 ? (
+          <div className="van-list">{ bookElements }</div>
         ) : (
           <p>
             Sorry we don't have that book yet. <br /> Would you like to search
             for another?
           </p>
-        )}
+        ) }
       </>
     );
   }
@@ -157,7 +159,7 @@ const Books = () => {
           </h2>
         }
       >
-        <Await resolve={dataPromise.books}>{renderBookElements}</Await>
+        <Await resolve={ dataPromise.books }>{ renderBookElements }</Await>
       </Suspense>
     </div>
   );

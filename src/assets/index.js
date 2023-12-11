@@ -24,10 +24,10 @@ import Bookshare23 from './images/Physics1.jpg'
 import Bookshare24 from './images/physics2.jpeg'
 
 export {
-Bookshare1, Bookshare2, Bookshare3, Bookshare4,
- Bookshare5, Bookshare6, Bookshare7, Bookshare8, 
- Bookshare9, Bookshare10, Bookshare11, Bookshare12,
- Bookshare13, Bookshare14, Bookshare15, Bookshare16,
- Bookshare17, Bookshare18, Bookshare19, Bookshare20,
- Bookshare21, Bookshare22, Bookshare23, Bookshare24, 
+    Bookshare1, Bookshare2, Bookshare3, Bookshare4,
+    Bookshare5, Bookshare6, Bookshare7, Bookshare8,
+    Bookshare9, Bookshare10, Bookshare11, Bookshare12,
+    Bookshare13, Bookshare14, Bookshare15, Bookshare16,
+    Bookshare17, Bookshare18, Bookshare19, Bookshare20,
+    Bookshare21, Bookshare22, Bookshare23, Bookshare24,
 }

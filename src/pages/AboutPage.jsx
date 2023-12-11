@@ -6,7 +6,7 @@ import gif3 from "../assets/gif/reading-more-books.gif";
 function AboutPage() {
   const bookShare = (
     <strong>
-      BOOK<span style={{ color: "#ff8c38" }}>SHARE</span>
+      BOOK<span style={ { color: "#ff8c38" } }>SHARE</span>
     </strong>
   );
   return (
@@ -14,20 +14,20 @@ function AboutPage() {
       <div className="about-page-wrapper">
         <div className="about-hero-wrapper">
           <p>
-            Welcome to {bookShare}, where the love for books meets the joy of
+            Welcome to { bookShare }, where the love for books meets the joy of
             reading! We are more than just an online bookstore; we are
             passionate bibliophiles dedicated to bringing the world of
             literature to your fingertips.
           </p>
-          <img src={gif} className="about-hero-image" alt="" />
-        </div>{" "}
+          <img src={ gif } className="about-hero-image" alt="" />
+        </div>{ " " }
         <div className="about-page-content">
           <div className="about-section2">
-            <img src={gif2} alt="" />
+            <img src={ gif2 } alt="" />
             <div>
               <h3>Our Mission</h3>
               <p>
-                At {bookShare}, our mission is to curate a diverse collection of
+                At { bookShare }, our mission is to curate a diverse collection of
                 books that cater to every taste and interest. We believe that
                 everyone deserves access to great literature, and our carefully
                 selected catalog reflects our commitment to quality and
@@ -47,20 +47,20 @@ function AboutPage() {
                 selection that spans genres and cultures.
               </p>
             </div>
-            <img className="about-section3" src={gif3} alt="" />
+            <img className="about-section3" src={ gif3 } alt="" />
           </div>
           <h3>Contact Us</h3>
           <p>
             Have questions or suggestions? We'd love to hear from you! Reach out
             to our dedicated support team at [support@yourbookstore.com] or
-            visit us{" "}
-            <Link to="/contact" style={{ color: "#ff8c38" }}>
+            visit us{ " " }
+            <Link to="/contact" style={ { color: "#ff8c38" } }>
               here
             </Link>
             .
           </p>
           <h2>
-            Thank you for choosing {bookShare} as your literary companion. Happy
+            Thank you for choosing { bookShare } as your literary companion. Happy
             reading!
           </h2> ``
         </div>

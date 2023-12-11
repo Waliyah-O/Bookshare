@@ -24,15 +24,15 @@ const Sidebar = ({ isLoggedIn, fakeLogOut }) => {
             <NavLink to="contact">Contact us</NavLink>
           </li>
           <li>
-            {isLoggedIn ? (
+            { isLoggedIn ? (
               <div>
-                <NavLink onClick={fakeLogOut}>Logout</NavLink>
+                <NavLink onClick={ fakeLogOut }>Logout</NavLink>
               </div>
             ) : (
               <NavLink to="login" className="login-link">
                 Login
               </NavLink>
-            )}
+            ) }
           </li>
         </ul>
       </div>
