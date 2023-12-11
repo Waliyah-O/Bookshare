@@ -39,14 +39,15 @@ export function loader({ request }) {
 
 export async function action({ request }) {
   const formData = await request.formData();
-  const username = formData.get("username");
+  const firstName = formData.get("username");
+  const lastName = formData.get("username");
   const email = formData.get("email");
   const password = formData.get("password");
   const pathname =
     new URL(request.url).searchParams.get("redirectTo") || "/host";
 
   try {
-    const data = await signupUser({ username, email, password });
+    const data = await signupUser({ firstName, lastName, email, password });
 
     // Save the token in localStorage
     localStorage.setItem("token", data.token);
@@ -90,7 +91,8 @@ const SignUp = () => {
       {errorMessage && <h4 className="login-error">{errorMessage}</h4>}
 
       <Form method="post" className="login-form" replace>
-        <input name="username" placeholder="username" type="text" />
+        <input name="firstName" placeholder="firstName" type="text" />
+        <input name="lastName" placeholder="lastName" type="text" />
         <input name="email" placeholder="Email address" type="email" />
         <input name="password" placeholder="Password" type="password" />
         <button disabled={navigation.state === "submitting"}>
