@@ -6,3 +6,5 @@ Add adventure to your life by joining the #bookshare movement.
           libraries, and individuals. Our platform combines the magic of
           literature with community compassion, creating pathways to knowledge
           and empowerment. 
+
+          style={{textAlign:'center', display:'flex', gap:'40px', justifyContent:'center', alignItems:'center', flexDirection:'column'}}

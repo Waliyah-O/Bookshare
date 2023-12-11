@@ -153,7 +153,7 @@ const Books = () => {
       <h1>Explore our book options</h1>
       <Suspense
         fallback={
-          <h2>
+          <h2 style={{textAlign:'center', display:'flex', justifyContent:'center', flexDirection:'column', gap:'15px', marginTop:'80px'}}>
             <Loader />
             Loading books....
           </h2>
