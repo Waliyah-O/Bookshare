@@ -1,6 +1,8 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap");
 /* #FDFEFE */
 /* #EBF5FB */
 /* #7FB3D5 */
@@ -239,6 +241,7 @@ video {
 /*** ABOUT PAGE ***/
 .about-page-container {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -246,6 +249,10 @@ video {
 }
 
 .about-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   /* width: 60%; */
   /* box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 1); */
   padding: 20px;
@@ -253,6 +260,7 @@ video {
 
 .about-hero-wrapper {
   display: flex;
+  width: 80%;
   align-items: center;
   justify-content: space-between;
 }
@@ -264,9 +272,17 @@ video {
 
 .about-section2,
 .about-section3 {
+  width: 80%;
   display: flex;
   align-items: center;
+  gap: 20px;
+  font-size: 16px;
   justify-content: space-between;
+  /* border: 2px solid green; */
+}
+
+.about-section2 img {
+  width: 50%;
 }
 
 .about-section3 img {
@@ -283,6 +299,11 @@ video {
 }
 
 .about-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   /* padding-inline: 23px; */
   color: #161616;
   margin-bottom: 55px;
@@ -297,8 +318,9 @@ video {
 }
 
 .about-page-cta {
+  width: 60%;
   background-color: #2980b9;
-  color: #161616;
+  color: white;
   padding-inline: 32px;
   padding-bottom: 32px;
   margin-inline: 27px;
@@ -374,7 +396,7 @@ video {
   border: none;
   border-radius: 5px;
   background-color: #7fb3d5;
-  color: #FDFEFE;
+  color: #fdfefe;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -402,12 +424,12 @@ video {
 
 .van-type.novel:hover,
 .van-type.novel.selected {
-  background-color: #E67E22;
+  background-color: #e67e22;
 }
 
 .van-type.book:hover,
 .van-type.book.selected {
-  background-color: #C0392B;
+  background-color: #c0392b;
 }
 
 .van-type.article:hover,
@@ -425,7 +447,7 @@ video {
   border-radius: 5px;
   text-decoration: underline;
   background-color: transparent;
-  color: #FDFEFE;
+  color: #fdfefe;
 }
 
 i[class*="van-type-"] {
@@ -696,7 +718,7 @@ i[class*="van-type-"] {
 }
 
 .search-form-input {
-  border: 2px solid #5499c7;
+  /* border: 2px solid #5499c7; */
   height: 40px;
   border-radius: 4px;
   text-indent: 10px;
@@ -758,7 +780,7 @@ i[class*="van-type-"] {
 }
 
 .login-form > button {
-  background-color: #5499C7;
+  background-color: #5499c7;
   border: none;
   border-radius: 6px;
   height: 55px;
@@ -808,7 +830,7 @@ i[class*="van-type-"] {
 }
 
 .host-dashboard-reviews {
-  background-color: #EBF5FB;
+  background-color: #ebf5fb;
   padding: 25px 26px;
   display: flex;
   align-items: center;
@@ -819,7 +841,7 @@ i[class*="van-type-"] {
 }
 
 .host-dashboard-reviews .star {
-  color: #5499C7;
+  color: #5499c7;
   margin-left: 15px;
   font-size: 25px;
 }
@@ -1087,4 +1109,193 @@ img.graph {
   font-weight: bold;
   text-decoration: underline;
   color: #161616;
+}
+.about-hero-content1 {
+  width: 800px;
+  color: black;
+  font-family: "EB Garamond", serif;
+  font-size: larger;
+}
+.us-apart {
+  font-family: "EB Garamond", serif;
+  font-size: larger;
+}
+/* .about-mission {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+} */
+
+.about-mission-content {
+  /* margin-left: 2rem;
+  padding: 2rem; */
+  /* width: 700px; */
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: larger;
+}
+/* .about-section3-h3{
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+} */
+.about-contact {
+  width: 80%;
+  
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 4rem; */
+}
+.contact-us-content {
+  text-align: center;
+  justify-content: center;
+  margin-right: 4rem;
+}
+.about-contact-us {
+  text-align: center;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+.thank-you {
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  font-size: larger;
+}
+.about-contents {
+  text-align: center;
+  margin-left: 2rem;
+  margin-top: 6rem;
+  font-family: "EB Garamond", serif;
+  font-size: larger;
+}
+
+.content {
+  position: relative;
+  /* bottom: 170px; */
+  margin-left: 40rem;
+}
+/* .content-text{
+    text-align: center;
+    justify-content: center;
+    
+  } */
+
+.content h2 {
+  color: #fff;
+  font-size: 3em;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #1a5276;
+}
+
+.content h2:nth-child(2) {
+  color: #1a5276;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+.contents {
+  /* position: relative;
+   left: 50%; */
+}
+
+.contents h3 {
+  color: #fff;
+  font-size: 3em;
+  /* position: absolute;
+  transform: translate(25%, -100%); */
+ 
+  margin-left: 2rem;
+}
+
+.contents h3:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #1a5276;
+}
+
+.contents h3:nth-child(2) {
+  color: #1a5276;
+  animation: animate 4s ease-in-out infinite;
+}
+
+.our-mission {
+  /* position: relative; */
+  /* left: 50%; */
+  margin-left: 6rem;
+  bottom: 70px;
+}
+
+
+
+.our-mission h3:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #1a5276;
+}
+
+.our-mission h3:nth-child(2) {
+  color: #1a5276;
+  animation: animate 4s ease-in-out infinite;
+}
+
+/* #FDFEFE */
+/* #EBF5FB */
+/* #7FB3D5 */
+/* #5499C7 */
+/* #1A5276 */
+/* #8E44AD */
+
+.password-input-container {
+  position: relative;
+}
+
+.password-input {
+  width: 100%;
+  padding: 0.5em 1em;
+}
+
+.show-btn {
+  all: unset;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
