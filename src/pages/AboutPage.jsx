@@ -3,37 +3,42 @@ import bgImg from "../assets/images/about-hero.png";
 
 function AboutPage() {
   return (
-    <div className="about-page-container">
+    <div className="about-page-container" style={{ display: "flex" }}>
       <div className="about-page-content">
-        <h1>About us</h1>
-        <p>
-          Bookshare Initiative facilitates the sharing of textbooks among
-          students. By participating in the initiative, students can both delve
-          into the captivating world of literature and collaborate in accessing
-          educational resources for their studies. We believe in the
-          extraordinary power of sharing, both n the form of used and new books
-          and vital financial aid. By connecting readers, learners, and
-          dreamers, we create a ripple effect of knowledge, inspiration, and
-          opportunity. Through our platform, we unite communities, bridging gaps
-          and empowering individuals from all walks of life. Join us in our
-          mission to foster a world where access to literature and educational
-          resources knows no boundaries. Together, let's create a legacy of
-          shared stories that change lives forever.
+        <h1>
+          About <span style={{ color: "#ff8c38" }}>us</span>
+        </h1>
+        <p style={{ fontWeight: "500" }}>
+          At Bookshare, we are passionate advocates for the transformative power
+          of literature and education. Committed to fostering a community of
+          lifelong learners, we provide a platform where individuals can embark
+          on intellectual journeys, exploring diverse stories and acquiring
+          knowledge that enriches the mind. Our curated collection of books is
+          more than a mere assortment of titles; it's a carefully selected
+          tapestry of thought-provoking narratives and educational resources.
+          With a dedication to accessibility and inclusivity, we strive to
+          bridge gaps and connect readers, learners, and educators. Founded on
+          the belief in the extraordinary impact of shared stories, we go beyond
+          the traditional boundaries of a bookstore. Bookshare is a vibrant
+          space where the love for learning meets the entrepreneurial spirit,
+          empowering individuals to turn their passion for literature into
+          educational and financial opportunities. Join us in creating a legacy
+          of shared stories that inspire, empower, and transform lives. At
+          Bookshare, every page tells a story, and every reader contributes to a
+          community of knowledge seekers. Together, let's shape a future where
+          access to literature and education knows no limits.
         </p>
       </div>
-      <div className="about-page-cta">
-        <h2>
-          Your destination is waiting.
-          <br />
-          Your van is ready.
-        </h2>
-        <div className="about-buttons">
-          <Link className="link-button" to="/books">
-            Explore our books
-          </Link>
-        </div>
-      </div>
-      <img src={bgImg} className="about-hero-image" alt="" />
+      <img
+        src={bgImg}
+        className="about-hero-image"
+        alt=""
+        style={{
+          width: "50%",
+          marginRight: "1.5rem",
+          borderRadius: "2rem,auto",
+        }}
+      />
     </div>
   );
 }
