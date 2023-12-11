@@ -7,14 +7,14 @@ const Reviews = () => {
       rating: 5,
       name: "Elliot",
       date: "January 3, 2023",
-      text: "The beach bum is such an awesome van! Such a comfortable trip. We had it for 2 weeks and there was not a single issue. Super clean when we picked it up and the host is very comfortable and understanding. Highly recommend!",
+      text:"BookShare is a fantastic platform for book enthusiasts! I've had the pleasure of reading various titles from fellow users, and the experience has been exceptional. The diverse collection caters to different tastes, and the sharing community is friendly and accommodating. Highly recommend for anyone passionate about exploring new books",
       id: "1",
     },
     {
       rating: 5,
       name: "Sandy",
       date: "December 12, 2022",
-      text: "This is our third time using the Modest Explorer for our travels and we love it! No complaints, absolutely perfect!",
+      text: "I've been using BookShare for a while now, and it's a game-changer for avid readers. The ease of sharing and discovering new books is unparalleled. The website is user-friendly, and I've had seamless interactions with other users. It's like having a virtual library at your fingertips. Kudos to the BookShare community!",
       id: "2",
     },
   ];
