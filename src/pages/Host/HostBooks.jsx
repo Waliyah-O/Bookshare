@@ -20,7 +20,7 @@ const HostBooks = () => {
           <img src={book.imageUrl} alt={`Photo of ${book.name}`} />
           <div className="host-van-info">
             <h3>{book.name}</h3>
-            <p>${book.price}/day</p>
+            <p>&#8358;{book.price}</p>
           </div>
         </div>
       </Link>

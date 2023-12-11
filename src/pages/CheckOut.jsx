@@ -60,11 +60,11 @@ const CheckoutPage = ({ price }) => {
 
   return (
     <div className="checkout-container">
-      {paymentSuccess ? (
+      { paymentSuccess ? (
         <div className="success-container">
-          {/* <p>Hi {fullName}!</p> */}
+          {/* <p>Hi {fullName}!</p> */ }
           <h2>Payment Successful!</h2>
-          <p>An email confirmation has been sent to {email}.</p>
+          <p>An email confirmation has been sent to { email }.</p>
           <p>
             Please contact Bab for your van and further instructions
             <AiOutlineMail /> b@b.com <MdWifiCalling2 /> 08012345678 for the
@@ -76,7 +76,7 @@ const CheckoutPage = ({ price }) => {
         </div>
       ) : (
         <div
-          style={{
+          style={ {
             display: "flex",
             width: "100vw",
             height: "100%",
@@ -84,21 +84,19 @@ const CheckoutPage = ({ price }) => {
             justifyContent: "space-evenly",
             padding: "10px",
             gap: "1em",
-          }}
+          } }
           className="checkout-deets"
         >
           <div>
             <h3>Checkout Details</h3>
             <p>
-              you are paying <strong>${book.price}</strong> for:
+              you are paying <strong>&#8358;{ book.price }</strong> for:
             </p>
-            <p>Book Name: {book.name}</p>
-            <p>Book ID: {book.id}</p>
-            <img style={{ width: "110px" }} src={book.imageUrl} alt="" />
-            <p style={{ width: "200px", fontSize: "11px" }}>
-              <strong>Disclaimer:</strong>failure to return rig at the end of
-              stipulated time will cost you your deposit as well as additional
-              fees.
+            <p>Book Name: { book.name }</p>
+            <p>Book ID: { book.id }</p>
+            <img style={ { width: "110px" } } src={ book.imageUrl } alt="" />
+            <p style={ { width: "200px", fontSize: "11px" } }>
+              <strong>Disclaimer:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, harum!
             </p>
           </div>
           <div className="checkout-form">
@@ -108,8 +106,8 @@ const CheckoutPage = ({ price }) => {
                   <label>Full Name:</label>
                   <input
                     type="text"
-                    value={fullName}
-                    onInput={(e) => setFullName(e.target.value)}
+                    value={ fullName }
+                    onInput={ (e) => setFullName(e.target.value) }
                   />
                 </div>
 
@@ -117,8 +115,8 @@ const CheckoutPage = ({ price }) => {
                   <label>Email Address:</label>
                   <input
                     type="text"
-                    value={email}
-                    onInput={(e) => setEmail(e.target.value)}
+                    value={ email }
+                    onInput={ (e) => setEmail(e.target.value) }
                   />
                 </div>
 
@@ -126,38 +124,31 @@ const CheckoutPage = ({ price }) => {
                   <label>Phone Number:</label>
                   <input
                     type="text"
-                    value={phoneNumber}
-                    onInput={(e) => setPhoneNumber(e.target.value)}
+                    value={ phoneNumber }
+                    onInput={ (e) => setPhoneNumber(e.target.value) }
                   />
                 </div>
               </div>
 
               <div className="checkout-amount">
-                <h4>Total amount in USD: ${amount * rentDuration}.00</h4>
-                <h4>
-                  Total amount in Naira:{" "}
-                  {formatAsNaira(amount * 300 * rentDuration)}.00
-                </h4>
-                <p style={{ fontSize: "10px" }}>
-                  *you will be charged in naira!
-                </p>
+                <h4>Total amount &#8358;{ amount * rentDuration }.00</h4>
               </div>
 
               <div className="paystackBtnDiv">
                 <PaystackButton
                   text="Pay with Paystack"
                   className="paystackBtn"
-                  email={email}
-                  amount={amount * 100 * 300} // Convert to kobo
-                  publicKey={publicKey}
-                  onSuccess={onSuccess}
-                  onClose={onClose}
+                  email={ email }
+                  amount={ amount * 100 * 300 } // Convert to kobo
+                  publicKey={ publicKey }
+                  onSuccess={ onSuccess }
+                  onClose={ onClose }
                 />
               </div>
             </div>
           </div>
         </div>
-      )}
+      ) }
     </div>
   );
 };
