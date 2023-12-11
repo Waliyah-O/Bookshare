@@ -205,3 +205,33 @@
   right: 0;
   width: 0;
 }
+
+.home-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: relative;
+  z-index: 0;
+}
+
+.bg-video > video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-text-container {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.359);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+}
+
+.hero-text h1,
+.hero-text p
+{
+  color: white;  
+}
