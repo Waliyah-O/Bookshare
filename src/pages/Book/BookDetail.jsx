@@ -6,7 +6,7 @@ export function loader({ params }) {
   return getBooks(params.id);
 }
 
-export default function VanDetail() {
+export default function BookDetail() {
   const location = useLocation();
   const book = useLoaderData();
 
@@ -15,27 +15,27 @@ export default function VanDetail() {
 
   return (
     <div>
-      <Link style={{marginBottom: '2em'}} to={`..${search}`} relative="path" className="back-button">
-        &larr; <span>Back to {type} books</span>
+      <Link style={ { marginBottom: '2em' } } to={ `..${search}` } relative="path" className="back-button">
+        &larr; <span>Back to { type } books</span>
       </Link>
       <div className="book-detail-container">
         <div className="book-detail">
           <div className="book-detail-image-container">
-            <img alt={book.name} src={book.imageUrl} />
-            <i className={`van-type ${book.type} selected`}>{book.type}</i>
+            <img alt={ book.name } src={ book.imageUrl } />
+            <i className={ `van-type ${book.type} selected` }>{ book.type }</i>
           </div>
           <div className="book-detail-content">
-            <h2>{book.name}</h2>
+            <h2>{ book.name }</h2>
             <p className="van-price">
-              <span>${book.price}</span>
+              <span>&#8358;{ book.price }</span>
             </p>
-            <p>{book.description}</p>
+            <p>{ book.description }</p>
             <button className="link-button">
               <Link
-                to={{
+                to={ {
                   pathname: `/book/${book.id}/checkout`,
                   state: { book },
-                }}
+                } }
               >
                 Buy this book
               </Link>

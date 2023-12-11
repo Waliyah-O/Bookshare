@@ -19,19 +19,19 @@ const HostDashboard = () => {
 
   function renderVanElements(books) {
     const hostBooksEls = books.map((book) => (
-      <div className="host-van-single" key={book.id}>
-        <img src={book.imageUrl} alt={`Photo of ${book.name}`} />
+      <div className="host-van-single" key={ book.id }>
+        <img src={ book.imageUrl } alt={ `Photo of ${book.name}` } />
         <div className="host-van-info">
-          <h3>{book.name}</h3>
-          <p>${book.price}</p>
+          <h3>{ book.name }</h3>
+          <p>&#8358;{ book.price }</p>
         </div>
-        <Link to={`books/${book.id}`}>View</Link>
+        <Link to={ `books/${book.id}` }>View</Link>
       </div>
     ));
 
     return (
       <div className="host-vans-list">
-        <section>{hostBooksEls}</section>
+        <section>{ hostBooksEls }</section>
       </div>
     );
   }
@@ -44,7 +44,7 @@ const HostDashboard = () => {
           <p>
             Earnings last <span>30 days</span>
           </p>
-          <h2>$2,260</h2>
+          <h2>&#8358;2,260</h2>
         </div>
         <Link to="income">Details</Link>
       </section>
@@ -68,7 +68,7 @@ const HostDashboard = () => {
             </>
           }
         >
-          <Await resolve={dataPromise.books}>{renderVanElements}</Await>
+          <Await resolve={ dataPromise.books }>{ renderVanElements }</Await>
         </Suspense>
       </section>
     </>

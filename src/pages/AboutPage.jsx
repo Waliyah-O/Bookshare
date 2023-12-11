@@ -6,7 +6,7 @@ import gif3 from "../assets/gif/reading-more-books.gif";
 function AboutPage() {
   const bookShare = (
     <strong>
-      BOOK<span style={{ color: "#ff8c38" }}>SHARE</span>
+      BOOK<span style={ { color: "#ff8c38" } }>SHARE</span>
     </strong>
   );
   return (
@@ -19,11 +19,11 @@ function AboutPage() {
             passionate bibliophiles dedicated to bringing the world of
             literature to your fingertips.
           </p>
-          <img src={gif} className="about-hero-image" alt="" />
-        </div>{" "}
+          <img src={ gif } className="about-hero-image" alt="" />
+        </div>{ " " }
         <div className="about-page-content">
           <div className="about-section2">
-            <img src={gif2} alt="" />
+            <img src={ gif2 } alt="" />
             <div>
               <div class="our-mission">
               <h3>Our Mission</h3>
@@ -54,7 +54,7 @@ function AboutPage() {
                 selection that spans genres and cultures.
               </p>
             </div>
-            <img className="about-section3" src={gif3} alt="" />
+            <img className="about-section3" src={ gif3 } alt="" />
           </div>
           <div className="about-contact">
           {/* <h3 className="about-contact-us">Contact Us</h3> */}

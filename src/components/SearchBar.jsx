@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, searchRef }) => {
   const [input, setInput] = useState("");
 
   const handleChange = (value) => {
@@ -11,8 +11,10 @@ const SearchBar = ({ onSearch }) => {
   return (
     <div className="search-form">
       <input
+        className="search-form-input"
+        ref={searchRef}
         placeholder="Type to search..."
-        value={input}
+        value={searchRef?.current?.value ?? ""}
         onChange={(e) => handleChange(e.target.value)}
       />
     </div>

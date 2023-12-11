@@ -10,16 +10,16 @@ export async function loader({ params, request }) {
 }
 
 const HostBookDetails = () => {
-  const currentVan = useLoaderData();
+  const currentBook = useLoaderData();
 
   // useEffect(() => {
   //   fetch(`/api/host/vans/${id}`)
   //     .then((res) => res.json())
-  //     .then((data) => setCurrentVan(data.vans))
+  //     .then((data) => setcurrentBook(data.vans))
   //     .catch((error) => console.log(error));
   // }, [id]);
 
-  if (!currentVan) {
+  if (!currentBook) {
     return <h1>Loading...</h1>;
   }
 
@@ -30,37 +30,37 @@ const HostBookDetails = () => {
       </Link>
       <div className="host-book-detail-layout-container">
         <div className="host-book-detail">
-          <img src={currentVan.imageUrl} alt="" />
+          <img src={ currentBook.imageUrl } alt="" />
           <div className="host-book-detail-info-text">
-            <i className={`van-type van-type-${currentVan.type}`}>
-              {currentVan.type}
+            <i className={ `van-type van-type-${currentBook.type}` }>
+              { currentBook.type }
             </i>
-            <h2>{currentVan.name}</h2>
-            <h4>${currentVan.price}</h4>
+            <h2>{ currentBook.name }</h2>
+            <h4>&#8358;{ currentBook.price }</h4>
           </div>
         </div>
         <nav className="host-book-detail-nav">
           <NavLink
-            style={({ isActive }) => (isActive ? activeStyle : null)}
+            style={ ({ isActive }) => (isActive ? activeStyle : null) }
             to="."
             end
           >
             Details
           </NavLink>
           <NavLink
-            style={({ isActive }) => (isActive ? activeStyle : null)}
+            style={ ({ isActive }) => (isActive ? activeStyle : null) }
             to="pricing"
           >
             Pricing
           </NavLink>
           <NavLink
-            style={({ isActive }) => (isActive ? activeStyle : null)}
+            style={ ({ isActive }) => (isActive ? activeStyle : null) }
             to="photos"
           >
             Photos
           </NavLink>
         </nav>
-        <Outlet context={{ currentVan }} />
+        <Outlet context={ { currentBook } } />
       </div>
     </section>
   );

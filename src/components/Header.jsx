@@ -40,24 +40,24 @@ const Header = () => {
     <>
       <header>
         <Link className="site-logo" to="/">
-          book<span style={{ color: "#ff8c38" }}>share</span>
+          book<span style={ { color: "#2980B9" } }>share</span>
         </Link>
         <nav>
           <NavLink
             to="/host"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
+            className={ ({ isActive }) => (isActive ? "active-link" : null) }
           >
             Host
           </NavLink>
           <NavLink
             to="/about"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
+            className={ ({ isActive }) => (isActive ? "active-link" : null) }
           >
             About page
           </NavLink>
           <NavLink
             to="/books"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
+            className={ ({ isActive }) => (isActive ? "active-link" : null) }
           >
             Books
           </NavLink>
@@ -69,25 +69,25 @@ const Header = () => {
           </NavLink> */}
           <NavLink
             to="/contact"
-            className={({ isActive }) => (isActive ? "active-link" : null)}
+            className={ ({ isActive }) => (isActive ? "active-link" : null) }
           >
             Contact us
           </NavLink>
 
-          {isLoggedIn ? (
-            <div onClick={fakeLogOut}>
+          { isLoggedIn ? (
+            <div onClick={ fakeLogOut }>
               <NavLink>
                 <FiLogOut />
               </NavLink>
             </div>
           ) : (
             <NavLink to="login" className="login-link">
-              <img src={avatarIcon} alt="avatar-icon" />
-              {/* <FiLogIn /> */}
+              <img src={ avatarIcon } alt="avatar-icon" />
+              {/* <FiLogIn /> */ }
             </NavLink>
-          )}
+          ) }
         </nav>
-        <Sidebar fakeLogOut={fakeLogOut} isLoggedIn={isLoggedIn} />
+        <Sidebar fakeLogOut={ fakeLogOut } isLoggedIn={ isLoggedIn } />
       </header>
     </>
   );

@@ -32,7 +32,6 @@ export async function action({ request }) {
   } catch (err) {
     return err.message;
   }
-
   // save user data.user in local storage
   // save token in a cookie
 }
@@ -46,22 +45,22 @@ const Login = () => {
   return (
     <div className="login-container">
       <h1>sign in to your account</h1>
-      {message && <h3 className="login-error">{message}</h3>}
-      {errorMessage && <h4 className="login-error">{errorMessage}</h4>}
+      { message && <h3 className="login-error">{ message }</h3> }
+      { errorMessage && <h4 className="login-error">{ errorMessage }</h4> }
 
       <Form method="post" className="login-form" replace>
         <input name="email" placeholder="Email address" type="email" />
         <input name="password" placeholder="Password" type="password" />
-        <button disabled={navigation.state === "submitting"}>
-          {navigation.state === "submitting" ? "Logging in..." : "Log in"}
+        <button disabled={ navigation.state === "submitting" }>
+          { navigation.state === "submitting" ? "Logging in..." : "Log in" }
         </button>
         <div
-          style={{
+          style={ {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             fontSize: "13px",
-          }}
+          } }
         >
           <Link to="/signup">Sign up</Link>
           <Link to="/forgotpassword">forgot password</Link>
