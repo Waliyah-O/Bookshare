@@ -20,11 +20,20 @@ const HostBooks = () => {
           <img src={book.imageUrl} alt={`Photo of ${book.name}`} />
           <div className="host-van-info">
             <h3>{book.name}</h3>
-            <p>&#8358;{book.price}</p>
+            <p>
+              Market Price:{" "}
+              <span style={{ textDecoration: "line-through", color: "red" }}>
+                &#8358;{book.originalPrice}
+              </span>
+            </p>
+            <p>Selling Price: &#8358;{book.price}</p>
           </div>
         </div>
       </Link>
     ));
+
+    // display: grid;
+  
     return (
       <>
         <div className="host-vans-list">
@@ -57,7 +66,7 @@ const HostBooks = () => {
   }, []);
 
   return (
-    <div>
+    <div className="host-books-lists">
       <h1 className="host-vans-title">Your listed books</h1>
       <Suspense
         fallback={
@@ -66,7 +75,9 @@ const HostBooks = () => {
           </>
         }
       >
-        <Await resolve={dataPromise.books}>{renderBookElements}</Await>
+        <div className="host-listed-books">
+          <Await resolve={dataPromise.books}>{renderBookElements}</Await>
+        </div>
       </Suspense>
     </div>
   );

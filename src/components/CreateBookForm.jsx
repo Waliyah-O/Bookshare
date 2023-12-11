@@ -14,6 +14,7 @@ const CreateBookForm = () => {
   const [formData, setFormData] = useState({
     id: new Date().getTime(),
     name: "",
+    originalPrice: "",
     price: "",
     description: "",
     type: "",
@@ -49,6 +50,7 @@ const CreateBookForm = () => {
           const bookData = {
             id: formData.id,
             name: formData.name,
+            originalPrice: formData.originalPrice,
             price: formData.price,
             description: formData.description,
             type: formData.type,
@@ -87,85 +89,81 @@ const CreateBookForm = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className="create-book-container">
       <h3>Add new book</h3>
-      <Form method="post" className="login-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="">Book ID:</label>
-          <input
-            type="number"
-            id="id"
-            name="id"
-            value={formData.id}
-            onChange={handleInputChange}
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="">price:</label>
-          <input
-            type="number"
-            id="price"
-            name="price"
-            value={formData.price}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="">description:</label>
-          <input
-            type="text"
-            id="description"
-            name="description"
-            value={formData.description}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div style={{ display: "flex", gap: "1em" }}>
-          <div>
-            <select
-              value={formData.type}
-              id="type"
-              name="type"
-              onChange={handleInputChange}
-            >
-              <option value="">Select option</option>
-              <option value="novel">Novel</option>
-              <option value="book">Book</option>
-              <option value="article">Article</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <label htmlFor="">imageUrl:</label>
-          <input
-            type="text"
-            id="imageUrl"
-            name="imageUrl"
-            value={formData.imageUrl}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="">hostId:</label>
-          <input
-            type="number"
-            id="hostId"
-            name="hostId"
-            value={formData.hostId}
-            onChange={handleInputChange}
-          />
-        </div>
+      <Form method="post" className="create-book-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Book name..."
+          value={formData.name}
+          onChange={handleInputChange}
+        />
+        <input
+          type="number"
+          id="id"
+          name="id"
+          placeholder="book id..."
+          value={formData.id}
+          onChange={handleInputChange}
+        />
+        <input
+          type="number"
+          id="originalPrice"
+          name="originalPrice"
+          placeholder="original price..."
+          value={formData.originalPrice}
+          onChange={handleInputChange}
+        />
+        <input
+          type="number"
+          id="price"
+          name="price"
+          placeholder="price"
+          value={formData.price}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          id="description"
+          name="description"
+          placeholder="description..."
+          value={formData.description}
+          onChange={handleInputChange}
+        />
+        <select
+          value={formData.type}
+          id="type"
+          name="type"
+          onChange={handleInputChange}
+        >
+          <option value="">Select option</option>
+          <option value="novel">Novel</option>
+          <option value="book">Book</option>
+          <option value="article">Article</option>
+        </select>
+        <input
+          type="file"
+          name="imageFile"
+          id="imageFile"
+          value={formData.imageFile}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          id="imageUrl"
+          name="imageUrl"
+          value={formData.imageUrl}
+          onChange={handleInputChange}
+        />
+        <input
+          type="number"
+          id="hostId"
+          name="hostId"
+          value={formData.hostId}
+          onChange={handleInputChange}
+        />
         <button type="submit">upload</button>
       </Form>
     </div>

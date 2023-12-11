@@ -36,6 +36,7 @@ const HostBookDetails = () => {
               { currentBook.type }
             </i>
             <h2>{ currentBook.name }</h2>
+            <p>Market Price: <span style={{textDecoration: 'line-through', color: 'red'}}>&#8358;{currentBook.originalPrice}</span></p>
             <h4>&#8358;{ currentBook.price }</h4>
           </div>
         </div>

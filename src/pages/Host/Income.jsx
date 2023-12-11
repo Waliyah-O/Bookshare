@@ -11,7 +11,7 @@ const Income = () => {
       <p>
         Last <span>30 days</span>
       </p>
-      <h2>&#8358;2,260</h2>
+      <h2>&#8358;269,260</h2>
       <img
         className="graph"
         src={ incomeGraph }

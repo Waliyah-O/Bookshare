@@ -44,7 +44,7 @@ const HostDashboard = () => {
           <p>
             Earnings last <span>30 days</span>
           </p>
-          <h2>&#8358;2,260</h2>
+          <h2>&#8358;269,260</h2>
         </div>
         <Link to="income">Details</Link>
       </section>
