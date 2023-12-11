@@ -6,8 +6,9 @@ import {
   useNavigation,
   Link,
 } from "react-router-dom";
-
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { loginUser } from "../api/bookapi";
+import { useState } from "react";
 
 export function loader({ request }) {
   // ibile (native) javascript lol!
@@ -41,26 +42,42 @@ const Login = () => {
   // console.log(message);
   const errorMessage = useActionData();
   const navigation = useNavigation();
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="login-container">
       <h1>sign in to your account</h1>
-      { message && <h3 className="login-error">{ message }</h3> }
-      { errorMessage && <h4 className="login-error">{ errorMessage }</h4> }
+      {message && <h3 className="login-error">{message}</h3>}
+      {errorMessage && <h4 className="login-error">{errorMessage}</h4>}
 
       <Form method="post" className="login-form" replace>
         <input name="email" placeholder="Email address" type="email" />
-        <input name="password" placeholder="Password" type="password" />
-        <button disabled={ navigation.state === "submitting" }>
-          { navigation.state === "submitting" ? "Logging in..." : "Log in" }
+        <div className="password-input-container">
+          <input
+            className="password-input"
+            name="password"
+            placeholder="Password"
+            type={showPassword ? "text" : "password"}
+          />
+
+          <button
+            type="button"
+            className="show-btn"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <BsEye /> : <BsEyeSlash />}
+          </button>
+        </div>
+        <button disabled={navigation.state === "submitting"}>
+          {navigation.state === "submitting" ? "Logging in..." : "Log in"}
         </button>
         <div
-          style={ {
+          style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             fontSize: "13px",
-          } }
+          }}
         >
           <Link to="/signup">Sign up</Link>
           <Link to="/forgotpassword">forgot password</Link>
