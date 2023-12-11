@@ -1,10 +1,12 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
-
-
+/* #FDFEFE */
+/* #EBF5FB */
+/* #7FB3D5 */
 /* #5499C7 */
-/* #2980B9 */
+/* #1A5276 */
+/* #8E44AD */
 
 * {
   box-sizing: border-box;
@@ -14,7 +16,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff7ed;
+  background-color: #fdfefe;
   font-family: "Inter", sans-serif;
 }
 
@@ -56,7 +58,7 @@ header .site-logo {
 a.active-link {
   font-weight: bold;
   text-decoration: underline;
-  background-color: #ffcc8d;
+  background-color: #5499c7;
   border-radius: 4px;
   color: #161616;
   font-weight: 3em;
@@ -191,7 +193,7 @@ footer {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  background-color: #2980B9;
+  background-color: #2980b9;
   border: none;
   width: 100%;
   margin-top: 7px;
@@ -289,7 +291,7 @@ footer {
 }
 
 .about-page-cta {
-  background-color: #ffcc8d;
+  background-color: #2980b9;
   color: #161616;
   padding-inline: 32px;
   padding-bottom: 32px;
@@ -365,8 +367,8 @@ footer {
   font-weight: 500;
   border: none;
   border-radius: 5px;
-  background-color: #ffead0;
-  color: #4d4d4d;
+  background-color: #7fb3d5;
+  color: #FDFEFE;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -381,7 +383,7 @@ footer {
 }
 
 .van-type:hover {
-  color: #ffead0;
+  color: white;
 }
 
 .van-type:focus {
@@ -389,17 +391,17 @@ footer {
 }
 
 .van-type.selected {
-  color: #ffead0;
+  color: white;
 }
 
 .van-type.novel:hover,
 .van-type.novel.selected {
-  background-color: #e17654;
+  background-color: #E67E22;
 }
 
 .van-type.book:hover,
 .van-type.book.selected {
-  background-color: #115e59;
+  background-color: #C0392B;
 }
 
 .van-type.article:hover,
@@ -417,7 +419,7 @@ footer {
   border-radius: 5px;
   text-decoration: underline;
   background-color: transparent;
-  color: #4d4d4d;
+  color: #FDFEFE;
 }
 
 i[class*="van-type-"] {
@@ -438,7 +440,7 @@ i[class*="van-type-"] {
 }
 
 .book-detail-container .back-button:visited {
-  background-color: orange;
+  background-color: #1a5276;
 }
 
 .book-detail-container .back-button span {
@@ -505,7 +507,7 @@ i[class*="van-type-"] {
 }
 
 .book-detail .link-button {
-  background-color: #ff8c38;
+  background-color: #5499c7;
   color: white;
   font-size: 1.125rem;
 }
@@ -522,7 +524,7 @@ i[class*="van-type-"] {
     gap: 1em;
   }
   .host-nav a:hover {
-    background-color: #ffcc8d;
+    background-color: #7fb3d5;
   }
 }
 
@@ -687,9 +689,8 @@ i[class*="van-type-"] {
   gap: 2px;
 }
 
-.search-form > input {
-  border: none;
-  outline: none;
+.search-form-input {
+  border: 2px solid #5499c7;
   height: 40px;
   border-radius: 4px;
   text-indent: 10px;
@@ -751,7 +752,7 @@ i[class*="van-type-"] {
 }
 
 .login-form > button {
-  background-color: #ff8c38;
+  background-color: #5499C7;
   border: none;
   border-radius: 6px;
   height: 55px;
@@ -771,7 +772,7 @@ i[class*="van-type-"] {
 }
 
 .host-dashboard-earnings {
-  background-color: #ffead0;
+  background-color: #7fb3d5;
   padding: 37px 26px;
   display: flex;
   justify-content: space-between;
@@ -801,7 +802,7 @@ i[class*="van-type-"] {
 }
 
 .host-dashboard-reviews {
-  background-color: #ffddb2;
+  background-color: #EBF5FB;
   padding: 25px 26px;
   display: flex;
   align-items: center;
@@ -812,7 +813,7 @@ i[class*="van-type-"] {
 }
 
 .host-dashboard-reviews .star {
-  color: #ff8c38;
+  color: #5499C7;
   margin-left: 15px;
   font-size: 25px;
 }

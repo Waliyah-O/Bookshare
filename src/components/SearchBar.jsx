@@ -11,10 +11,11 @@ const SearchBar = ({ onSearch, searchRef }) => {
   return (
     <div className="search-form">
       <input
-        ref={ searchRef }
+        className="search-form-input"
+        ref={searchRef}
         placeholder="Type to search..."
-        value={ searchRef?.current?.value ?? '' }
-        onChange={ (e) => handleChange(e.target.value) }
+        value={searchRef?.current?.value ?? ""}
+        onChange={(e) => handleChange(e.target.value)}
       />
     </div>
   );
