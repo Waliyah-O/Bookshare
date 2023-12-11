@@ -1,7 +1,10 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
+
+/* #5499C7 */
+/* #2980B9 */
 
 * {
   box-sizing: border-box;
@@ -188,7 +191,7 @@ footer {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  background-color: #ff8c38;
+  background-color: #2980B9;
   border: none;
   width: 100%;
   margin-top: 7px;
