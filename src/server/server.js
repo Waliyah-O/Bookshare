@@ -32,61 +32,6 @@ createServer({
   },
   seeds(server) {
     server.create("book", {
-      id: "20",
-      name: "Sleek gold",
-      originalPrice: 8000,
-      price: 2560,
-      description:
-        "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl: Bookshare20,
-      type: "book",
-      hostId: "456",
-    });
-    server.create("book", {
-      id: "21",
-      name: "Sleek orange",
-      originalPrice: 8000,
-      price: 2060,
-      description:
-        "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl: Bookshare21,
-      type: "novel",
-      hostId: "456",
-    });
-    server.create("book", {
-      id: "22",
-      name: "time for school",
-      originalPrice: 8000,
-      price: 1760,
-      description:
-        "The Green Goblin is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl: Bookshare22,
-      type: "novel",
-      hostId: "456",
-    });
-    server.create("book", {
-      id: "23",
-      name: "New school physics",
-      originalPrice: 8000,
-      price: 0,
-      description:
-        "The Green Goblin is a van free designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      imageUrl: Bookshare23,
-      type: "article",
-      hostId: "456",
-    });
-    server.create("book", {
-      id: "24",
-      name: "Principles of physics",
-      originalPrice: 8000,
-      price: 0,
-      description:
-        "This free book to get you out of the house  and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer! ",
-      imageUrl: Bookshare24,
-      type: "book",
-      hostId: "456",
-    });
-    server.create("book", {
       id: "1",
       name: "Principles of physics",
       originalPrice: 9000,
