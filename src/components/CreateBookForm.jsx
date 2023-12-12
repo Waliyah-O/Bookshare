@@ -43,6 +43,7 @@ const CreateBookForm = () => {
       .post("/api/books", formData)
       .then((response) => {
         alert(`Status: Book ${response.statusText} `);
+        navigate('/host/books')
 
         if (response.data && response.data.id !== null) {
           // Save the book data to local storage
