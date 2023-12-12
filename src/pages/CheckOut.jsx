@@ -131,7 +131,7 @@ const CheckoutPage = ({ price }) => {
               </div>
 
               <div className="checkout-amount">
-                <h4>Total amount &#8358;{ amount * rentDuration }.00</h4>
+                <h4>Total amount &#8358;{ amount }.00</h4>
               </div>
 
               <div className="paystackBtnDiv">
@@ -139,7 +139,7 @@ const CheckoutPage = ({ price }) => {
                   text="Pay with Paystack"
                   className="paystackBtn"
                   email={ email }
-                  amount={ amount * 100 * 300 } // Convert to kobo
+                  amount={ amount * 100 } // Convert to kobo
                   publicKey={ publicKey }
                   onSuccess={ onSuccess }
                   onClose={ onClose }
