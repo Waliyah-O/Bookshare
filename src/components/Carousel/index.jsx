@@ -3,8 +3,8 @@ import React from "react";
 const Carousel = () => {
   return (
     <div>
-      <div className="carousel carousel-center max-w-5xl p-4 space-x-4 bg-slate-500 rounded-box text-white">
-        <div className="carousel-item w-1/2 flex flex-col items-center ">
+      <div className="carousel carousel-center max-w-5xl p-4 space-x-4 bg-slate-800 rounded-box text-white flex gap-4">
+        <div className="carousel-item w-1/2 flex flex-col items-center">
           <h3 className="text-3xl font-bold">Quality Education</h3>
           <h4 className="text-lg">
             {" "}
