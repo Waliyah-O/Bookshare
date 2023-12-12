@@ -18,9 +18,22 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #fdfefe;
+  background-color: white;
+  color: black;
   font-family: "Inter", sans-serif;
 }
+
+
+input, select{
+  color: #1A5276;
+  padding: 10px;
+  background-color: #EBF5FB;
+
+}
+select{
+  padding: 10px;
+}
+
 
 a {
   text-decoration: unset;

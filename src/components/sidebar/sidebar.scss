@@ -42,6 +42,7 @@
 
 /* Global Styles */
 .sidebar {
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -56,7 +57,7 @@
       }
 
       &:hover {
-        background-color: #ffcc8d;
+        background-color: #7FB3D5;
 
         & > ul {
           top: 0%;
