@@ -64,9 +64,9 @@ const Books = () => {
       ? displayedBooks.filter(
           (book) =>
             book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            book.id.toString().includes(searchTerm) ||
+            book.id.toString().includes(searchTerm.toLowerCase()) ||
             book.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            book.price.toString().includes(searchTerm) ||
+            book.price.toString().includes(searchTerm.toLowerCase()) ||
             book.type.toLowerCase().includes(searchTerm.toLowerCase())
         )
       : displayedBooks;

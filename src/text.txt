@@ -67,7 +67,7 @@ Query Parameters
         <button
           className="van-type luxury"
           onClick={() => setSearchParams({ type: "luxury" })}
-        >
+        >`
           luxury
         </button>
         <button

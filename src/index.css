@@ -1034,7 +1034,7 @@ img.graph {
   justify-content: center;
 }
 .host-reviews {
-  width: 0%;
+  width: 100%;
   padding-inline: 26px;
   color: #161616;
 }

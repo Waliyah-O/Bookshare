@@ -1,17 +1,18 @@
-import axios from "axios"
+import axios from "axios";
+import { loadImage } from "canvas";
 
 export async function getBooks(id) {
-  const url = id ? `/api/books/${id}` : "/api/books"
-  const res = await fetch(url)
+  const url = id ? `/api/books/${id}` : "/api/books";
+  const res = await fetch(url);
   if (!res.ok) {
     throw {
       message: "Failed to fetch books",
       statusText: res.statusText,
-      status: res.status
-    }
+      status: res.status,
+    };
   }
-  const data = await res.json()
-  return data.books
+  const data = await res.json();
+  return data.books;
 }
 
 export async function checkHostIdExists(hostId) {
@@ -19,34 +20,36 @@ export async function checkHostIdExists(hostId) {
 }
 
 export async function getHostBooks(id) {
-  const url = id ? `/api/host/books/${id}` : "/api/host/books"
-  const res = await fetch(url)
+  const url = id ? `/api/host/books/${id}` : "/api/host/books";
+  const res = await fetch(url);
   if (!res.ok) {
     throw {
       message: "Failed to fetch books",
       statusText: res.statusText,
-      status: res.status
-    }
+      status: res.status,
+    };
   }
-  const data = await res.json()
-  return data.books
+  const data = await res.json();
+  console.log(data);
+  return data;
 }
 
 export async function loginUser(creds) {
-  const res = await fetch("/api/login",
-    { method: "post", body: JSON.stringify(creds) }
-  )
-  const data = await res.json()
+  const res = await fetch("/api/login", {
+    method: "post",
+    body: JSON.stringify(creds),
+  });
+  const data = await res.json();
 
   if (!res.ok) {
     throw {
       message: data.message,
       statusText: res.statusText,
-      status: res.status
-    }
+      status: res.status,
+    };
   }
 
-  return data
+  return data;
 }
 
 export async function signupUser(creds) {
